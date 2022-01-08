@@ -4,8 +4,8 @@ Main run game file for 'Numberex'
 import random
 import pyfiglet
 
-story = pyfiglet.figlet_format("       Numberex", font="contessa")
-print(story)
+numberex = pyfiglet.figlet_format("       Numberex", font="contessa")
+print(numberex)
 
 
 def guess(num):
