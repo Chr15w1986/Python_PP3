@@ -6,7 +6,7 @@ import random
 
 def guess(num):
     """
-    Function to generate a random number between 1 and 10
+    Function to generate a random number between 1 and 10 for the user to guess
     """
     random_number = random.randint(1, num)
     guess = 0
@@ -28,13 +28,18 @@ def computer_guess(num):
     """
     high = num
     low = 1
-    while computer_guess != random_number:
+    computer_feedback = ''
+    while computer_feedback != 'c':
         guess = random.randint(low, high)
-        if guess < random_number:
-            print('Oops, Guess a little higher!\n')
-        elif guess > random_number:
-            print('Hmmm, Guess a little lower!\n')
-        
+        computer_feedback = input(f'Is my number {guess} too high (H), \
+            too low (L) or correct(C)?? ')
+        print(computer_feedback)
+        if computer_guess == 'H':
+            high = guess - 1
+        elif computer_guess == 'L':
+            low = guess + 1
+
+    print(f'Well done! You guessed the number I was thinking of {guess}..\n')     
 
 # name input function
 
