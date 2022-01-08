@@ -21,4 +21,10 @@ def guess(num):
     print(f'Well done! You guessed the correct number {random_number}\n')
 
 
+def computer_guess(num):
+    high = num
+    low = 1
+    while computer_guess != random_number:
+        
+
 guess(10)
