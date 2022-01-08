@@ -1,5 +1,5 @@
 """
-Main run game file for 'Number X'
+Main run game file for 'Numberrex'
 """
 import random
 
@@ -33,7 +33,7 @@ def computer_guess(num):
         if low != high:
             guess = random.randint(low, high)
         else:
-            guess = high
+            guess = low
         computer_feedback = input(f'         Is my number {guess} \n \
         too high(H), too low(L) or correct(C)?? \n')
         print(computer_feedback)
@@ -48,5 +48,11 @@ def computer_guess(num):
 
 
 # start game with choice of user vs AI or AI vs user.
+def start_game(name):
+    name = input(f'What is your name: {name}')
+print(name)
+
+name()
 computer_guess(10)
 guess(10)
+
