@@ -1,5 +1,5 @@
 """
-Main game file for 'Number X'
+Main run game file for 'Number X'
 """
 import random
 
@@ -30,20 +30,23 @@ def computer_guess(num):
     low = 1
     computer_feedback = ''
     while computer_feedback != 'c':
-        guess = random.randint(low, high)
-        computer_feedback = input(f'Is my number {guess} too high (H), \
-            too low (L) or correct(C)?? ')
+        if low != high:
+            guess = random.randint(low, high)
+        else:
+            guess = high
+        computer_feedback = input(f'         Is my number {guess} \n \
+        too high(H), too low(L) or correct(C)?? \n')
         print(computer_feedback)
         if computer_guess == 'H':
             high = guess - 1
         elif computer_guess == 'L':
             low = guess + 1
 
-    print(f'Well done! You guessed the number I was thinking of {guess}..\n')     
+    print(f'AI guessed the number you were thinking of {guess}..\n')
 
 # name input function
 
 
 # start game with choice of user vs AI or AI vs user.
-
+computer_guess(10)
 guess(10)
