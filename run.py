@@ -45,14 +45,12 @@ def computer_guess(num):
     print(f'AI guessed the number you were thinking of {guess}..\n')
 
 # name input function
-
+# def user_name():
+#     name = input(f'What is your name: {name}')
+# print(name)
 
 # start game with choice of user vs AI or AI vs user.
-def start_game(name):
-    name = input(f'What is your name: {name}')
-print(name)
 
-name()
+
 computer_guess(10)
 guess(10)
-
