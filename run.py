@@ -1,7 +1,11 @@
 """
-Main run game file for 'Numberrex'
+Main run game file for 'Numberex'
 """
 import random
+import pyfiglet
+
+story = pyfiglet.figlet_format("       Numberex", font="contessa")
+print(story)
 
 
 def guess(num):
@@ -45,9 +49,7 @@ def computer_guess(num):
     print(f'AI guessed the number you were thinking of {guess}..\n')
 
 # name input function
-# def user_name():
-#     name = input(f'What is your name: {name}')
-# print(name)
+
 
 # start game with choice of user vs AI or AI vs user.
 
