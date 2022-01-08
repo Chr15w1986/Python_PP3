@@ -22,9 +22,23 @@ def guess(num):
 
 
 def computer_guess(num):
+    """
+    Allows user to think of a number between 1 and 10 for the AI to guess with
+    higher(H) lower(L) or correct(C) options
+    """
     high = num
     low = 1
     while computer_guess != random_number:
+        guess = random.randint(low, high)
+        if guess < random_number:
+            print('Oops, Guess a little higher!\n')
+        elif guess > random_number:
+            print('Hmmm, Guess a little lower!\n')
         
+
+# name input function
+
+
+# start game with choice of user vs AI or AI vs user.
 
 guess(10)
