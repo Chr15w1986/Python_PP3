@@ -4,6 +4,7 @@ Main run game file for 'Numberex'
 import random
 import pyfiglet
 
+
 numberex = pyfiglet.figlet_format("       Numberex", font="contessa")
 print(numberex)
 
