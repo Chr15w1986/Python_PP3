@@ -19,9 +19,9 @@ def guess(num):
         guess = int(input(f'Make a guess at a number between 1 and {num}: '))
         print(guess)
         if guess < random_number:
-            print('Oops, Guess a little higher!\n')
+            print(f'Sorry {name}, Guess a little higher!\n')
         elif guess > random_number:
-            print('Hmmm, Guess a little lower!\n')
+            print(f'Sorry {name}, Guess a little lower!\n')
 
     print(f'Well done! You guessed the correct number {random_number}\n')
 
