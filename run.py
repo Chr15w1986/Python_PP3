@@ -51,11 +51,13 @@ def computer_guess(num):
 
 
 # name input function
-name = input("Enter your name: ")
-print("Hello " + name + ", Welcome to Numberex!")
+name = input("         Enter your name: ")
+print("         Hello " + name + ", Welcome to Numberex!")
 
 # start game with choice of user vs AI or AI vs user.
 
 
 computer_guess(10)
 guess(10)
+
+quit()
