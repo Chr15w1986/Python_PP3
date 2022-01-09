@@ -46,10 +46,12 @@ def computer_guess(num):
         elif computer_guess == 'L':
             low = guess + 1
 
-    print(f'AI guessed the number you were thinking of {guess}..\n')
+    print(f'AI guessed {guess}, the number you were thinking of..\n')
+
 
 # name input function
-
+name = input("Enter your name: ")
+print("Hello " + name + ", Welcome to Numberex!")
 
 # start game with choice of user vs AI or AI vs user.
 
