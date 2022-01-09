@@ -26,7 +26,7 @@ def guess(num):
     print(f'Well done! You guessed the correct number {random_number}\n')
 
 
-def computer_guess(num):
+def computer_guess(num):   # requires some attention
     """
     Allows user to think of a number between 1 and 10 for the AI to guess with
     higher(H) lower(L) or correct(C) options
@@ -50,12 +50,24 @@ def computer_guess(num):
     print(f'AI guessed {guess}, the number you were thinking of..\n')
 
 
-# name input function
+def start_game(question):   # requires some attention
+    """
+    Function to give the user the option to start the game
+    with y/n Yes or No.
+    Function credit to https://gist.github.com/garrettdreyfus/8153571
+    """
+    prompt = f'{question}? (y/n): '
+    ans = input(prompt).strip().lower()
+    if ans not in ['y', 'n']:
+        print(f'{ans} is invalid, please try again...')
+        return start_game(question)
+    if ans == 'y':
+        return True
+    return False
+
+
 name = input("         Enter your name: ")
 print("         Hello " + name + ", Welcome to Numberex!")
-
-# start game with choice of user vs AI or AI vs user.
-
 
 computer_guess(10)
 guess(10)
