@@ -41,7 +41,6 @@ def computer_guess(num):   # requires some attention
             guess = low
         computer_feedback = input(f'         Is my number {guess} \n \
         too high(H), too low(L) or correct(C)?? \n')
-        print(computer_feedback)
         if computer_guess == 'H':
             high = guess - 1
         elif computer_guess == 'L':
@@ -54,7 +53,6 @@ def start_game(question):   # requires some attention
     """
     Function to give the user the option to start the game
     with y/n Yes or No.
-    Function credit to https://gist.github.com/garrettdreyfus/8153571
     """
     prompt = f'{question}? (y/n): '
     ans = input(prompt).strip().lower()
@@ -72,4 +70,4 @@ print("         Hello " + name + ", Welcome to Numberex!")
 computer_guess(10)
 guess(10)
 
-quit()
+exit()
