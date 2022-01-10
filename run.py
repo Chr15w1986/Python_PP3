@@ -70,4 +70,4 @@ print("         Hello " + name + ", Welcome to Numberex!")
 computer_guess(10)
 guess(10)
 
-exit()
+exit(0)
