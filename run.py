@@ -90,4 +90,9 @@ print("         Please make a choice: \n \
 computer_guess(10)
 guess(10)
 
-exit(0)
+restart = input("Do you want to restart the game? ")
+if restart == "yes":
+    computer_guess(10)
+    guess(10)
+else:
+    exit(0)
