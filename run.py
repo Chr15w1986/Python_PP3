@@ -18,12 +18,28 @@ def guess(num):
     while guess != random_number:
         guess = int(input(f'Make a guess at a number between 1 and {num}: '))
         print(guess)
+        try:
+            guess = int(guess)
+        except IndexError():
+            print(f'Sorry, {name}, that is not a number!')
         if guess < random_number:
             print(f'Sorry {name}, Guess a little higher!\n')
         elif guess > random_number:
             print(f'Sorry {name}, Guess a little lower!\n')
-
     print(f'Well done! You guessed the correct number {random_number}\n')
+    while guess != random_number:
+        guess_count = 0
+        guess_limit = 3
+        out_of_guesses = False
+        if guess_count < guess_limit:
+            guess = input("Enter Your Guess: ")
+            guess_count += 1
+        else:
+            out_of_guesses = True
+        if out_of_guesses:
+            print("Sorry, you ran out of guesses")
+        else:
+            print("Well done, you guessed correctly")
 
 
 def computer_guess(num):   # requires some attention
@@ -65,7 +81,11 @@ def start_game(question):   # requires some attention
 
 
 name = input("         Enter your name: ")
-print("         Hello " + name + ", Welcome to Numberex!")
+print("         Hello " + name + ",  Welcome to Numberex!")
+
+# implement choice of games below
+print("         Please make a choice: \n \
+                AI vs USER or USER vs AI")
 
 computer_guess(10)
 guess(10)
