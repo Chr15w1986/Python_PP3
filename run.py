@@ -99,13 +99,14 @@ def game_restart(game_type):
     The function will also check if the user wishes to make a choice on which
     game to restart.
     """
-    while restart:
+    while start_game("Do you want to restart the game? "):
         if game_type == 'u':
             computer_guess(10)
         if game_type == 'c':
             user_guess(10)
-            restart = start_game("Do you want to restart the game? ")
+        else:
             game_type = choose_game("please make a choice")
+
 
 print("Thank you for playing!")
 sys.exit(0)
