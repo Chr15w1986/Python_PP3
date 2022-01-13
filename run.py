@@ -89,10 +89,6 @@ def start_game(question):   # requires some attention
 name = input("         Enter your name: ")
 print("         Hello " + name + ",  Welcome to Numberex!")
 
-# implement choice of games below
-print("         Please make a choice: \n \
-                AI vs USER or USER vs AI")
-
 computer_guess(10)
 user_guess(10)
 
