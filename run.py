@@ -93,7 +93,7 @@ def computer_guess(num):
                 break
 
             # If the user states the value is too low
-            if computer_feedback == 'l':
+            elif computer_feedback == 'l':
                 # Validation to check if the above is possible
                 # before adding 1
                 if low < num:
@@ -103,6 +103,7 @@ def computer_guess(num):
                 break
             else:
                 print("Please select L, H or C")
+
 
 name = input("         Enter your name: ")
 print("         Hello " + name + ",  Welcome to Numberex!")
@@ -117,7 +118,7 @@ def game_restart(game_type):
     The function will also check if the user wishes to make a choice on which
     game to restart.
     """
-    while start_game("Do you want to restart the game? "):
+    while game_restart("Do you want to restart the game? "):
         if game_type == 'u':
             computer_guess(10)
         if game_type == 'c':
