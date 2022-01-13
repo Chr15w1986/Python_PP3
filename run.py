@@ -52,9 +52,26 @@ def computer_guess(num):
     high = num
     low = 1
     computer_feedback = ''
+    guess = 0
 
-    while computer_feedback != 'h' or computer_feedback != 'l':
+    while True:
+        # If the user selects C
+        if computer_feedback == 'c':
+            print(f'AI guessed {guess}, the number you were thinking of..\n')
+            break
+
+        # If the upper and lower limits do not match
         if low != high:
+            # This will only be called if the user tries to cheat
+            try:
+                guess = random.randint(low, high)
+                computer_feedback = ''
+            # If the user has cheated (all the way up then all the way down)
+            # Game prints a statment and breaks out of the loop
+            except ValueError:
+                print("I am not playing this game with you anymore!")
+                break
+
             guess = random.randint(low, high)
         elif low != num or high != 1:
             guess = low
@@ -67,8 +84,6 @@ def computer_guess(num):
             high = guess - 1
         elif computer_guess == 'L':
             low = guess + 1
-
-    print(f'AI guessed {guess}, the number you were thinking of..\n')
 
 
 def start_game(question):   # requires some attention
@@ -105,7 +120,7 @@ def game_restart(game_type):
         if game_type == 'c':
             user_guess(10)
         else:
-            game_type = choose_game("please make a choice")
+            game_type("please make a choice")
 
 
 print("Thank you for playing!")
