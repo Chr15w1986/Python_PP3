@@ -71,15 +71,15 @@ def computer_guess(num):
             except ValueError:
                 print("I am not playing this game with you anymore!")
                 break
-
-            guess = random.randint(low, high)
-        elif low != num or high != 1:
+        else:
             guess = low
-        elif high == low:
-            print("I am not playing this game with you anymore!")
-            break
-        computer_feedback = input(f'         Is my number {guess} \n \
-        too high(H), too low(L) or correct(C)?? \n')
+            computer_feedback = ''
+
+            # Loops indefinitely until the user selects a valid choice
+        while computer_feedback not in ['c', 'l', 'h']:
+            computer_feedback = input(f'         Is my number {guess} \n \
+            too high(H), too low(L) or correct(C)?? \n')
+
         if computer_guess == 'H':
             high = guess - 1
         elif computer_guess == 'L':
