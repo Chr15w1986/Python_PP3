@@ -103,27 +103,32 @@ def computer_guess(num):
                 break
 
 
+# Allows the user to input their own name to play the game
+
+
 name = input("         Enter your name: ")
 print("         Hello " + name + ",  Welcome to Numberex!")
 
-computer_guess(10)
+
+# Called functions for main game to run
 user_guess(10)
+computer_guess(10)
 
 
-def game_restart(game_type):
+def end_game():
     """
     This function will restart the game if the user has come to the end,
     The function will also check if the user wishes to make a choice on which
     game to restart.
     """
-    while game_restart("Do you want to restart the game? "):
-        if game_type == 'u':
-            computer_guess(10)
-        if game_type == 'c':
+    game_restart = input("Do you want to restart the game? [Y/N]")
+    while game_restart.lower() == 'y':
+        if game_restart == 'y':
             user_guess(10)
-        else:
-            game_type("please make a choice")
-
-
-print("Thank you for playing!")
-sys.exit(0)
+            game_restart = input("Do you want to restart the game? [Y/N]")
+        elif game_restart.lower() == 'n':
+            break
+        if game_restart.lower() == 'n':
+            # if the user does not want to restart, the game ends
+            print("Thank you for playing!")
+            sys.exit(0)
