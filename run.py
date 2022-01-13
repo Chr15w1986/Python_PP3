@@ -11,6 +11,24 @@ numberex = pyfiglet.figlet_format("       Numberex", font="contessa")
 print(numberex)
 
 
+def end_game():
+    """
+    This function will restart the game if the user has come to the end,
+    The function will also check if the user wishes to make a choice on which
+    game to restart.
+    """
+    game_restart = input("Do you want to restart the game? [Y/N]")
+    while game_restart.lower() == 'y':
+        if game_restart == 'y':
+            user_guess(10)
+            computer_guess(10)
+            game_restart = input("Do you want to restart the game? [Y/N]")
+        elif game_restart.lower() == 'n':
+            # if the user does not want to restart, the game ends
+            print("Thank you for playing!")
+            sys.exit(0)
+
+
 def user_guess(num):
     """
     Function to generate a random number between 1 and 10 for the user to guess
@@ -58,7 +76,7 @@ def computer_guess(num):
         # If the user selects C
         if computer_feedback == 'c':
             print(f'AI guessed {guess}, the number you were thinking of..\n')
-            break
+            end_game()
 
         # If the upper and lower limits do not match
         if low != high:
@@ -113,22 +131,3 @@ print("         Hello " + name + ",  Welcome to Numberex!")
 # Called functions for main game to run
 user_guess(10)
 computer_guess(10)
-
-
-def end_game():
-    """
-    This function will restart the game if the user has come to the end,
-    The function will also check if the user wishes to make a choice on which
-    game to restart.
-    """
-    game_restart = input("Do you want to restart the game? [Y/N]")
-    while game_restart.lower() == 'y':
-        if game_restart == 'y':
-            user_guess(10)
-            game_restart = input("Do you want to restart the game? [Y/N]")
-        elif game_restart.lower() == 'n':
-            break
-        if game_restart.lower() == 'n':
-            # if the user does not want to restart, the game ends
-            print("Thank you for playing!")
-            sys.exit(0)
