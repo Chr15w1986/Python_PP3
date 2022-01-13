@@ -50,11 +50,15 @@ def computer_guess(num):   # requires some attention
     high = num
     low = 1
     computer_feedback = ''
-    while computer_feedback != 'c':
+
+    while computer_feedback != 'h' or computer_feedback != 'l':
         if low != high:
             guess = random.randint(low, high)
-        else:
+        elif low != num or high != 1:
             guess = low
+        elif high == low:
+            print("I am not playing this game with you anymore!")
+            break
         computer_feedback = input(f'         Is my number {guess} \n \
         too high(H), too low(L) or correct(C)?? \n')
         if computer_guess == 'H':
