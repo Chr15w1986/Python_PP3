@@ -1,6 +1,8 @@
 """
 Main run game file for 'Numberex'
 """
+import sys
+
 import random
 import pyfiglet
 
@@ -42,7 +44,7 @@ def user_guess(num):
             print("Well done, you guessed correctly")
 
 
-def computer_guess(num):   # requires some attention
+def computer_guess(num):
     """
     Allows user to think of a number between 1 and 10 for the AI to guess with
     higher(H) lower(L) or correct(C) options
@@ -94,9 +96,20 @@ print("         Please make a choice: \n \
 computer_guess(10)
 user_guess(10)
 
-restart = input("Do you want to restart the game? ")
-if restart == "yes":
-    computer_guess(10)
-    user_guess(10)
-else:
-    exit(0)
+
+def game_restart(game_type):
+    """
+    This function will restart the game if the user has come to the end,
+    The function will also check if the user wishes to make a choice on which
+    game to restart.
+    """
+    while restart:
+        if game_type == 'u':
+            computer_guess(10)
+        if game_type == 'c':
+            user_guess(10)
+            restart = start_game("Do you want to restart the game? ")
+            game_type = choose_game("please make a choice")
+
+print("Thank you for playing!")
+sys.exit(0)
