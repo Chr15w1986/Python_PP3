@@ -101,8 +101,6 @@ def computer_guess(num):
                 else:
                     print("Are you sure? ")
                 break
-            else:
-                print("Please select L, H or C")
 
 
 name = input("         Enter your name: ")
