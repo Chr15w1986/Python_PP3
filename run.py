@@ -80,10 +80,19 @@ def computer_guess(num):
             computer_feedback = input(f'         Is my number {guess} \n \
             too high(H), too low(L) or correct(C)?? \n')
 
-        if computer_guess == 'H':
-            high = guess - 1
-        elif computer_guess == 'L':
-            low = guess + 1
+            # If the user states the value is too high
+            if computer_feedback == 'h':
+                # Validation to check if the above is possible
+                # before subtracting 1
+                if high > 1 and guess != 1:
+                    high = guess - 1
+                else:
+                    print("Are you sure? ")
+                    high = guess
+                break
+
+            elif computer_guess == 'L':
+                low = guess + 1
 
 
 def start_game(question):   # requires some attention
