@@ -9,7 +9,7 @@ numberex = pyfiglet.figlet_format("       Numberex", font="contessa")
 print(numberex)
 
 
-def guess(num):
+def user_guess(num):
     """
     Function to generate a random number between 1 and 10 for the user to guess
     """
@@ -88,11 +88,11 @@ print("         Please make a choice: \n \
                 AI vs USER or USER vs AI")
 
 computer_guess(10)
-guess(10)
+user_guess(10)
 
 restart = input("Do you want to restart the game? ")
 if restart == "yes":
     computer_guess(10)
-    guess(10)
+    user_guess(10)
 else:
     exit(0)
