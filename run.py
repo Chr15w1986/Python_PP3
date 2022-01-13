@@ -100,7 +100,6 @@ def computer_guess(num):
                     low = guess + 1
                 else:
                     print("Are you sure? ")
-                    low = guess
                 break
             else:
                 print("Please select L, H or C")
