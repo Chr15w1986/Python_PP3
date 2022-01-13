@@ -69,7 +69,8 @@ def computer_guess(num):
             # If the user has cheated (all the way up then all the way down)
             # Game prints a statment and breaks out of the loop
             except ValueError:
-                print("I am not playing this game with you anymore!")
+                print("I think you are cheating..\
+                    I am not playing this game with you anymore!")
                 break
         else:
             guess = low
@@ -91,8 +92,18 @@ def computer_guess(num):
                     high = guess
                 break
 
-            elif computer_guess == 'L':
-                low = guess + 1
+            # If the user states the value is too low
+            if computer_feedback == 'l':
+                # Validation to check if the above is possible
+                # before adding 1
+                if low < num:
+                    low = guess + 1
+                else:
+                    print("Are you sure? ")
+                    low = guess
+                break
+            else:
+                print("Please select L, H or C")
 
 
 def start_game(question):   # requires some attention
