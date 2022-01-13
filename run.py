@@ -11,7 +11,7 @@ numberex = pyfiglet.figlet_format("       Numberex", font="contessa")
 print(numberex)
 
 
-def end_game():
+def end_game():  # needs validation ### issue with exit
     """
     This function will restart the game if the user has come to the end,
     The function will also check if the user wishes to make a choice on which
