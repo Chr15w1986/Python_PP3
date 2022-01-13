@@ -104,22 +104,6 @@ def computer_guess(num):
             else:
                 print("Please select L, H or C")
 
-
-def start_game(question):   # requires some attention
-    """
-    Function to give the user the option to start the game
-    with y/n Yes or No.
-    """
-    prompt = f'{question}? (y/n): '
-    ans = input(prompt).strip().lower()
-    if ans not in ['y', 'n']:
-        print(f'{ans} is invalid, please try again...')
-        return start_game(question)
-    if ans == 'y':
-        return True
-    return False
-
-
 name = input("         Enter your name: ")
 print("         Hello " + name + ",  Welcome to Numberex!")
 
