@@ -52,7 +52,8 @@ def user_guess(num):
         elif guess > random_number:
             print(f'Sorry {name}, Guess a little lower!\n')
         else:
-            print(f'Well done! You guessed the correct number {random_number}\n')
+            print(f'Well done! You guessed the correct number\
+                 {random_number}\n')
         if guess_count < guess_limit:
             guess_count += 1
         else:
@@ -123,7 +124,10 @@ def computer_guess(num):
 
 
 name = input("         Enter your name: ")
-print("         Hello " + name + ",  Welcome to Numberex!")
+print("         Hello " + name + ",  Welcome to Numberex!,\n \
+        * The game rules are simple,\n \
+        * Firstly, you try and guess the AI number.\n \
+        * Secondly, The AI will try and guess your number.\n ")
 
 
 # Called functions for main game to run
