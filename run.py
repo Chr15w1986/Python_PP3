@@ -32,6 +32,7 @@ def end_game():
 def user_guess(num):
     """
     Function to generate a random number between 1 and 10 for the user to guess
+    And remaining guesses (lives)
     """
     random_number = random.randint(1, num)
     guess = 0
@@ -54,6 +55,7 @@ def user_guess(num):
         else:
             print(f'Well done! You guessed the correct number\
                  {random_number}\n')
+        # Checks how many lives are left, loops until zero
         if guess_count < guess_limit:
             guess_count += 1
         else:
