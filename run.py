@@ -11,14 +11,14 @@ numberex = pyfiglet.figlet_format("       Numberex", font="contessa")
 print(numberex)
 
 
-def end_game():  # needs validation ### issue with exit
+def end_game():
     """
     This function will restart the game if the user has come to the end,
     The function will also check if the user wishes to make a choice on which
     game to restart.
     """
     game_restart = input("Do you want to restart the game? [Y/N]")
-    while game_restart.lower() == 'y':
+    while game_restart.lower() in ['y', 'n']:
         if game_restart == 'y':
             user_guess(10)
             computer_guess(10)
@@ -35,7 +35,10 @@ def user_guess(num):
     """
     random_number = random.randint(1, num)
     guess = 0
-    while guess != random_number:
+    guess_count = 0
+    guess_limit = 3
+    out_of_guesses = False
+    while guess != random_number and not out_of_guesses:
         guess = int(input(f'Make a guess at a number between 1 and {num}: '))
         print(guess)
         # Validation to check if the input is a number
@@ -48,21 +51,14 @@ def user_guess(num):
             print(f'Sorry {name}, Guess a little higher!\n')
         elif guess > random_number:
             print(f'Sorry {name}, Guess a little lower!\n')
-    print(f'Well done! You guessed the correct number {random_number}\n')
-    # Doesnt work...
-    while guess != random_number:
-        guess_count = 0
-        guess_limit = 3
-        out_of_guesses = False
+        else:
+            print(f'Well done! You guessed the correct number {random_number}\n')
         if guess_count < guess_limit:
-            guess = input("Enter Your Guess: ")
             guess_count += 1
         else:
             out_of_guesses = True
         if out_of_guesses:
             print("Sorry, you ran out of guesses")
-        else:
-            print("Well done, you guessed correctly")
 
 
 def computer_guess(num):
@@ -79,8 +75,7 @@ def computer_guess(num):
         # If the user selects C
         if computer_feedback == 'c':
             print(f'AI guessed {guess}, the number you were thinking of..\n')
-            end_game()
-
+            break
         # If the upper and lower limits do not match
         if low != high:
             # This will only be called if the user tries to cheat
@@ -134,3 +129,4 @@ print("         Hello " + name + ",  Welcome to Numberex!")
 # Called functions for main game to run
 user_guess(10)
 computer_guess(10)
+end_game()
