@@ -38,15 +38,18 @@ def user_guess(num):
     while guess != random_number:
         guess = int(input(f'Make a guess at a number between 1 and {num}: '))
         print(guess)
+        # Validation to check if the input is a number
         try:
             guess = int(guess)
         except IndexError():
             print(f'Sorry, {name}, that is not a number!')
+        # User attempt loop
         if guess < random_number:
             print(f'Sorry {name}, Guess a little higher!\n')
         elif guess > random_number:
             print(f'Sorry {name}, Guess a little lower!\n')
     print(f'Well done! You guessed the correct number {random_number}\n')
+    # Doesnt work...
     while guess != random_number:
         guess_count = 0
         guess_limit = 3
