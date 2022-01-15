@@ -20,6 +20,8 @@ The upper number limit can be chosen by the user for difficulty.
 - [USER STORIES](#user-stories)
 - [FEATURES](#features)
     - [Game Components](#the-game-consists-of)
+        - [User vs AI](#user-vs-ai)
+        - [AI vs User](#ai-vs-user)
     - [Future Features](#future-features)
 - [TESTING](#testing)
     - [Flowchart](#flowchart)
@@ -124,7 +126,8 @@ The upper number limit can be chosen by the user for difficulty.
         `Do you want to restart the game? [Y/N]`
         If the user inputs `y`, the game restarts to 
         the User vs AI with the original input difficulty. 
-        If the user inputs `n` the game ends with a message `Thank you for playing Numberex!`
+        If the user inputs `n` the game ends with a message 
+        `Thank you for playing Numberex!`. Outcome: `Fulfilled.`
 
 ## FLOWCHART
 
@@ -134,8 +137,6 @@ The upper number limit can be chosen by the user for difficulty.
 
 ![Flow Chart](images/Flowchart.png)
 </details>
-
-## FUNCTIONALITY
 
 ## Validation
 ### PEP8 Online Validation
@@ -148,19 +149,6 @@ The upper number limit can be chosen by the user for difficulty.
 </details>
 
 
-## SOLVED BUGS AND ERRORS
-
-* 
-* Any duplicate or unused code i.e., selectors, classes, id's and elements have been removed
-* Any irrelevant space in between code has been removed
-
-## UNSOLVED BUGS OR ERRORS
-
-* The stop button, although it stopped the timer, if the start button was then pressed again, the timer would deduct 4ms and then count past the 0ms into minus figures
-    * This was actually due to the `throttleAmount` loop being re-run at the interval of 4ms
-        - The error still exists, but, it is such a small amount of time (4 milliseconds) that it is hardly noticeable to the user
-* ![alert box example](assets/testing/error4ms.png)
-
 #
 # TECHNOLOGIES
 
@@ -168,7 +156,7 @@ The upper number limit can be chosen by the user for difficulty.
 
 * The project was written and tested using [Gitpod](https://gitpod.io/)
 * The project uses [Github](https://github.com/) for utilising git version control
-* The project was deployed via [Heroku](https://heroku.com/) 
+* The project was deployed via [Heroku](https://heroku.com/)
 
 
 ## LANGUAGES USED
@@ -177,19 +165,40 @@ The upper number limit can be chosen by the user for difficulty.
 
 #
 # DEPLOYMENT
-## REMOTE DEPLOYMENT:
-(Assuming you have already cloned or forked)
-* This Game was deployed using GitHub Pages with the following the steps:
 
-1. Click on the `Settings` icon at the top of page in the navigation bar
-2. Scroll down until you see `Github Pages`
-3. There will be a message box saying `Check it out here` Click on the link to take you to the next page
-4. Here you will be greated with a form, `Choose the repository` `Javascript_PP2`
-5. Choose the branch in the drop down box, in this case `MAIN`
-6. Choose the directory in the next drop down box, in this case `Root`
-7. Then click `Save`
-8. It may take a few moments for the game to publish, but once live, the box at the top of the page with the site name will turn green and have a `Green` tick to the left of the link to the live page
-9. Another way to find the live page is to navigate to settings, on the left menu click on `pages` and this will get you to the same point
+## Heroku
+
+* This Game was deployed using [Heroku](https://heroku.com/) with the following the steps:
+
+1. Navigate to [Heroku.com](https://www.heroku.com/) and log-in or create a new account.
+2. On the top right hand side, click the 'New' button.
+3. Inside the dropdown menu, select 'Create new app'.
+4. Create a new name for your app (making sure the name chosen is available) in this case it is `numberex`.
+    App names can only be in lower-case letters, numbers and dashes.
+5. Select your region, in this case, `Europe`.
+6. Click on the `Create App` button.  
+7. This will create your app in Heroku and take you to the [Heroku](https://heroku.com/) dashboard.
+8. Navigate to the settings tab and scroll down to the button `Reveal Config vars`.
+9. Replace the word `KEY` and enter `PORT` and then replace the word `VALUE` and enter `8000` then click on the `Add` button.
+10. Below `Config vars` is `Buildpacks`. Click the `Add Buildpack` button.
+11. In the pop up window, select `python` and save changes.
+12. Repeat this again but this time selecting `node.js` and save the changes.
+13. It is `important` to make sure the buildpacks are in the correct order 
+    with `Python` being at the top and `node.js` bottom. If they are not in the correct order, you can drag them into the right order.
+14. Next, navigate to the `Deploy` tab at the top left side.
+15. Select `Github, 'connect to github'` as the deployment method.
+16. Search for the Github Repository in the search field (in this case `Python_PP3`) and click `Search`.
+17. When the search is complete, click `connect`.
+18. Once your repository is connected to [Heroku](https://heroku.com/), Click the `Enable Automatic Deploys` button for automatic deployment.
+19. Alternatively you can manually deploy by selecting a branch to deploy from and clicking `Deploy Branch`.
+20. If you choose to `Enable Automatic Deploys`, [Heroku](https://heroku.com/) will build a new version of the app when a change to 
+    `gitpod` is pushed to `Github`.  
+21. Manual deployment allows you to update the app whenever you click `Deploy Branch`.
+    In the case of this project, I chose to `Enable Automatic Deploys` to ensure the code was deployed straight away at each push from `Gitpod`.
+22. Once the build process is complete (this can take a few seconds) you will then be able to view the live app by clicking on the button `View`
+    below `Your app was successfully deployed`.
+
+## Version control
 
 * These commands were used for version control during project:
 
@@ -199,30 +208,32 @@ The upper number limit can be chosen by the user for difficulty.
     * git branch - to see which branch currently working on
     * git pull - to pull all code into main branch once the feature branch had been merged and deleted
     * git status - to see if the branch currently working on is upto date or if the are any unstaged
+    * git log --oneline - to see the last commit
+    * git commit --amend - to amend the most recent commit message
 
-## HOW TO CREATE A BRANCH/TAG OF MAIN:
+## How to create a branch/Tag of main:
 
 If you need to `BRANCH` off of the main repository:
 
-1. If you have not already, login in to [GitHub](www.github.com) and go to https://github.com/Chr15w1986/Javascript_PP2
+1. If you have not already, login in to [GitHub](www.github.com) and go to https://github.com/Chr15w1986/Python_PP3
 2. On the left side of the screen underneath the nav links, click the drop down box `Main`
 3. Inside the box you will see `Create new branch/tag`
 4. Inside the text box, enter the new branch or tag name i.e., `Features`
 5. Below the Branches Tags tab, you will see `Create branch: Features from "main"`
 6. Click on `Create branch: Features from "main"` and you will be taken to the new branch page you just called `Features`
 
-## HOW TO FORK A REPOSITORY:
+## How to fork a repository:
 
 If you need to `FORK` a repository:
 
-1. If you have not already, login in to [GitHub](www.github.com) and go to https://github.com/Chr15w1986/Javascript_PP2
+1. If you have not already, login in to [GitHub](www.github.com) and go to https://github.com/Chr15w1986/Python_PP3
 2. In the top right corner, click `Fork`
-3. The next page will be the forked version of https://github.com/Chr15w1986/Javascript_PP2 but in your own repository
-## HOW TO CLONE A REPOSITORY:
+3. The next page will be the forked version of https://github.com/Chr15w1986/Python_PP3 but in your own repository
+## How to clone a repository:
 
 If you need to make a clone of this repository:
 
-1. Fork the repository https://github.com/Chr15w1986/Javascript_PP2 using the steps above
+1. Fork the repository https://github.com/Chr15w1986/Python_PP3 using the steps above
 2. Above the file list, click `Code` (Usually green at the top right of the code window)
 3. Choose if you want to clone using HTTPS, SSH or GitHub CLI, then click the copy button to the right
 4. Open Git Bash
@@ -230,11 +241,11 @@ If you need to make a clone of this repository:
 6. Type `git clone` and then paste the URL you copied in step 4
 7. Press `Enter` to create your clone
 
-## HOW TO MAKE A LOCAL CLONE
+## How to make a local clone:
 
 If you need to make a local clone:
 
-1. If you have not already, login in to [GitHub](www.github.com) and go to https://github.com/Chr15w1986/Javascript_PP2
+1. If you have not already, login in to [GitHub](www.github.com) and go to https://github.com/Chr15w1986/Python_PP3
 2. Under the repository name, above the list of files, click `Code`
 3. Here you will have two options, `Clone` or `Download` the repository
 4. You should close the repository using HTTPS, clicking on the icon to copy the link
@@ -249,28 +260,14 @@ If you need to make a local clone:
 
 ### IMAGE
 
-* Background image, silhouette of a clock was taken from [Pixabay](https://pixabay.com/fi/illustrations/her%c3%a4tyskello-siluetti-kello-musta-2806057/)
+* Background image of numbers collage, [IStockphoto](https://www.istockphoto.com/search/2/image?phrase=numbers)
 
 ### CODE
-
-* [Stackoverflow](https://stackoverflow.com/questions/9647215/what-is-minimum-millisecond-value-of-settimeout) For milliseconds throttle amount code and functions
-* [Stackoverflow](https://stackoverflow.com/questions/40638402/why-wont-my-countdown-timer-start-and-stop) For a function idea to get the timer to stop
-* [OSTraining](https://www.ostraining.com/blog/coding/stopwatch/) On how to create a stopwatch using javascript
-* Everybody on slack for pointing me to [W3Schools](https://www.w3schools.com/) for more indepth guides to the correct syntax and uses of Functions in JAVASCRIPT
 #
 ## ACKNOWLEDGEMENTS:
-
-- Code institute for the Tutors on the course
-- My Mentor [Ben Kavanagh](https://github.com/BAK2K3) for his brilliant advice on my code, whether my code is right or wrong, his excellent way with words and constantly believing in me
-- Dave Horrocks, for taking time out of his own studies, for his excellent teaching style and expertise on all things javascript.
-- My family for their support and patience
-- Everybody on Slack for tips, advice, quick fixes and kind words
 
 #### RETURN TO THE [TOP](#one-stop-clock)
 issues:
 found issue with user vs AI where the user would guess a number between 1 and 10 but if the user guessed 10, AI would say higher, or if user guessed 1 the AI would say lower.
 
 found issue with AI vs user, where there was a double input of the user controls of H L or C, for example, if the user is thinking of 5 and AI guessed 4, I would input H for higher, but two H H would appear on seperate lines.
-
-
-used pyfiglet for the title Numberex
