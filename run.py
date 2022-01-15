@@ -68,7 +68,7 @@ My number was: {random_number}\n')
 
             else:
                 print(f'Please choose a number between 1 and {num}')
-
+        # To check if the value entered is a number
         except ValueError:
             print(f'Sorry, {name}, that is not a number!')
 
