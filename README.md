@@ -23,13 +23,14 @@ The upper number limit can be chosen by the user for difficulty.
         - [User vs AI](#user-vs-ai)
         - [AI vs User](#ai-vs-user)
     - [Future Features](#future-features)
+    - [Images](#images)
+    - [Typography](#typography)
 - [TESTING](#testing)
     - [Flowchart](#flowchart)
     - [Validation](#validation)
     - [PEP8](#pep8-online-validation)
     - [Solved bugs and errors](#solved-bugs-and-errors)
     - [Unsolved bugs and errors](#unsolved-bugs-or-errors)
-    - [FUNCTIONALITY](#functionality)
 
 #
 
@@ -97,11 +98,11 @@ The upper number limit can be chosen by the user for difficulty.
 * Add how many lives the User or AI had left once correctly guessed the number
 
 
-* IMAGES
+### Images
     * There is one background image, for aesthetics only
     [IStockphoto](https://www.istockphoto.com/search/2/image?phrase=numbers)
 
-* TYPOGRAPHY
+### Typography
     * The project uses [Pyfiglet](http://www.figlet.org/examples.html) for the ascii art (title)
     * Otherwise, Standard terminal font, cannot be changed.
 # 
@@ -129,7 +130,7 @@ The upper number limit can be chosen by the user for difficulty.
         If the user inputs `n` the game ends with a message 
         `Thank you for playing Numberex!`. Outcome: `Fulfilled.`
 
-## FLOWCHART
+## Flowchart
 
 <details>
 <summary>Gameplay Flowchart image</summary>
@@ -148,6 +149,25 @@ The upper number limit can be chosen by the user for difficulty.
 ![PEP8 Results - run.py](images/PEP8.png)
 </details>
 
+
+## Solved bugs and errors
+
+* Throughout the build of this project several automated errors have been fixed i.e.
+    Indentation errors,
+    Undefined variable name,
+    Not enough whitespace between functions,
+    Invalid syntax errors,
+    Imported but unused errors.
+* Any duplicate or unused code, comments etc have been removed
+* Any irrelevant space in between code has been removed
+
+## Unsolved bugs and errors
+
+* All previous errors during the development process have been resolved
+
+## Manual testing
+
+* still to do #####################################
 
 #
 # TECHNOLOGIES
@@ -263,10 +283,25 @@ If you need to make a local clone:
 * Background image of numbers collage, [IStockphoto](https://www.istockphoto.com/search/2/image?phrase=numbers)
 
 ### CODE
+
+* [W3Schools](https://www.w3schools.com/) for an interesting read on python functions and how they can be implemented.
+* [Stackoverflow](https://stackoverflow.com/questions/57409696/imported-but-unused-in-python) For an unused import error I was experiencing.
+* [Stackoverflow](https://stackoverflow.com/questions/27076239/adding-scoring-system-to-a-number-guessing-game-including-play-again)
+    For a rough guide on how to implement a restart game function.
+
 #
 ## ACKNOWLEDGEMENTS:
 
-#### RETURN TO THE [TOP](#one-stop-clock)
+- Code institute for the amazing Tutors on the course
+- My brilliant Mentor Ben Kavanagh, [BAK2K3](https://github.com/BAK2K3) for his brilliant advice on my code, Pushing me back on track 
+    when I start to lose faith, Taking time out of his own day and duties to answer ALL of my questions with utter perfection!
+- Dave Horrocks [DaveyJH](https://github.com/daveyjh), Again! for giving me time out of his own studies, for his patience, helping me above and beyond.
+- Shellie Downie [ShellieD](https://github.com/shellieD), For her support, Pointing out an obvious issue with my code so quickly.. TWICE! after hours of staring at it and looking straight over the problem.
+- My family for their support, patience and testing!!
+- My wonderful fiancée for being my personal spell checker and for listening to me when I need to rant!
+- Everybody on Slack for tips, advice, quick fixes and support
+
+#### RETURN TO THE [TOP](#numberex)
 issues:
 found issue with user vs AI where the user would guess a number between 1 and 10 but if the user guessed 10, AI would say higher, or if user guessed 1 the AI would say lower.
 
