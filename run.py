@@ -140,6 +140,7 @@ if __name__ == '__main__':
         if len(user_name) > 0:
             break
     while True:
+        # Allows the user to choose difficulty by choosing an upper number
         try:
             user_number = int(input("         Please choose an upper limit: "))
             break
