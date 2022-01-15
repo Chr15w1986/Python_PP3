@@ -19,24 +19,15 @@ The upper number limit can be chosen by the user for difficulty.
 
 - [USER STORIES](#user-stories)
 - [FEATURES](#features)
-    - []
+    - [Game Components](#the-game-consists-of)
+    - [Future Features](#future-features)
 - [TESTING](#testing)
-  - [Validation](#validation)
-  - [FUNCTIONALITY](#functionality)
-- [TECHNOLOGIES](#technologies)
-  - [DEVELOPMENT](#development)
-  - [LANGUAGES USED](#languages-used) 
-- [DEPLOYMENT](#deployment)
-  - [REMOTE DEPLOYMENT:](#remote-deployment)
-  - [HOW TO CREATE A BRANCH/TAG OF MAIN:](#how-to-create-a-branchtag-of-main)
-  - [HOW TO FORK A REPOSITORY:](#how-to-fork-a-repository)
-  - [HOW TO CLONE A REPOSITORY:](#how-to-clone-a-repository)
-  - [HOW TO MAKE A LOCAL CLONE](#how-to-make-a-local-clone)
-  - [CREDITS AND REFERENCES](#credits-and-references)
-    - [IMAGE](#image)
-    - [CODE](#code)
-  - [ACKNOWLEDGEMENTS:](#acknowledgements)
-      - [RETURN TO THE TOP](#return-to-the-top)
+    - [Flowchart](#flowchart)
+    - [Validation](#validation)
+    - [PEP8](#pep8-online-validation)
+    - [Solved bugs and errors](#solved-bugs-and-errors)
+    - [Unsolved bugs and errors](#unsolved-bugs-or-errors)
+    - [FUNCTIONALITY](#functionality)
 
 #
 
@@ -116,7 +107,26 @@ The upper number limit can be chosen by the user for difficulty.
         If the user inputs `n` the game ends with a message `Thank you for playing Numberex!`
 
 ## FLOWCHART
+
+<details>
+<summary>Gameplay Flowchart image</summary>
+<br>
+
 ![Flow Chart](images/Flowchart.png)
+</details>
+
+## FUNCTIONALITY
+
+## Validation
+### PEP8 Online Validation
+
+<details>
+<summary>PEP8 Screenshot Results for game run file</summary>
+<br>
+
+![PEP8 Results - run.py](images/PEP8.png)
+</details>
+
 
 issues:
 found issue with user vs AI where the user would guess a number between 1 and 10 but if the user guessed 10, AI would say higher, or if user guessed 1 the AI would say lower.
