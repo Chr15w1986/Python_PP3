@@ -8,10 +8,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/addons/attach/attach.js"></script>
-    <title>Python Terminal by Code Institute</title>
+    <title>Numberex by Chris Williams</title>
     <style>
         body {
             font-family: Arial;
+        }
+
+        #bg_img {
+            background: url(assets/images/numbers-bg.jpg) center center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -10;
+            height: 100vh;
+            width: 100%;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         /**
@@ -156,9 +173,9 @@
         }
 
         button {
-            width: 200px;
+            width: 220px;
             height: 40px;
-            background-color: #E84610;
+            background-color: #407e06;
             border: 1px solid grey;
             color: white;
             text-transform: uppercase;
@@ -168,6 +185,10 @@
     </style>
 </head>
 
-@{body}
+<div id="container">
+    @{body}
+</div>
+
+<div id="bg-img"></div>
 
 </html>
