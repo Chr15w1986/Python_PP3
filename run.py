@@ -55,7 +55,7 @@ def user_guess(num, name):
                     print(f'\nSorry {name}, Guess a little lower!\n')
                     print(f'Guesses remaining {guess_limit-guess_count}')
                 else:
-                    print(f'Well done! You guessed the correct number\
+                    print(f'Well done! You guessed the correct number \
 {random_number}\n')
                 # Checks how many lives are left, loops until zero
                 if guess_count < guess_limit:
@@ -99,7 +99,7 @@ def computer_guess(num, name):
             # Game prints a statment and breaks out of the loop
             except ValueError:
                 print(f"I think you are cheating {name}..\
-                    I am not playing this game with you anymore!")
+I am not playing this game with you anymore!")
                 break
         else:
             guess = low
