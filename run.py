@@ -25,7 +25,7 @@ def end_game(num, name):
             game_restart = input("Do you want to restart the game? [Y/N]")
         elif game_restart.lower() == 'n':
             # if the user does not want to restart, the game ends
-            print("Thank you for playing!")
+            print("Thank you for playing Numberex!")
             sys.exit(0)
 
 
@@ -37,7 +37,7 @@ def user_guess(num, name):
     random_number = random.randint(1, num)
     guess = 0
     guess_count = 1
-    guess_limit = 3
+    guess_limit = 5
     out_of_guesses = False
     while guess != random_number and not out_of_guesses:
         guess = input(f'Make a guess at a number between 1 and {num}: ')
@@ -56,14 +56,15 @@ def user_guess(num, name):
                     print(f'Guesses remaining {guess_limit-guess_count}')
                 else:
                     print(f'Well done! You guessed the correct number\
-                        {random_number}\n')
+{random_number}\n')
                 # Checks how many lives are left, loops until zero
                 if guess_count < guess_limit:
                     guess_count += 1
                 else:
                     out_of_guesses = True
                 if out_of_guesses:
-                    print("Sorry, you ran out of guesses")
+                    print(f'Sorry, you ran out of guesses. \
+My number was: {random_number}\n')
 
             else:
                 print(f'Please choose a number between 1 and {num}')
@@ -85,7 +86,8 @@ def computer_guess(num, name):
     while True:
         # If the user selects C
         if computer_feedback == 'c':
-            print(f'AI guessed {guess}, the number you were thinking of..\n')
+            print(f'HAHA! I guessed {guess}, the number you\
+ were thinking of..I WIN! ;-)\n')
             break
         # If the upper and lower limits do not match
         if low != high:
@@ -105,7 +107,7 @@ def computer_guess(num, name):
 
             # Loops indefinitely until the user selects a valid choice
         while computer_feedback not in ['c', 'l', 'h']:
-            computer_feedback = input(f'         Is my number {guess} \n \
+            computer_feedback = input(f'         My Turn!!..Is my number {guess} \n \
             too high(H), too low(L) or correct(C)?? \n')
 
             # If the user states the value is too high
