@@ -34,6 +34,13 @@ The upper number limit can be chosen by the user for personalised difficulty.
 - [MANUAL TESTING](#manual-testing)
     - [Solved bugs and errors](#solved-bugs-and-errors)
     - [Unsolved bugs and errors](#unsolved-bugs-or-errors)
+- [TECHNOLOGIES](#technologies)
+    - [Development](#development)
+    - [Languages used](#languages-used)
+    - [Libraries used](#libraries-used)
+- [DEPLOYMENT](#deployment)
+- [CREDITS AND REFERENCES](#credits-and-references)
+- [ACKNOWLEDGEMENTS](#acknowledgements)
 
 #
 
