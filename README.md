@@ -29,7 +29,7 @@ The upper number limit can be chosen by the user for personalised difficulty.
 
 - [USER STORIES](#user-stories)
 - [FEATURES](#features)
-    - [Game Components](#the-game-consists-of)
+    - [Gameplay Components](#gameplay-components)
         - [User vs AI](#user-vs-ai)
         - [AI vs User](#ai-vs-user)
     - [Future Features](#future-features)
@@ -69,7 +69,7 @@ The upper number limit can be chosen by the user for personalised difficulty.
         the User's number
     * Make sure any user input is validated to prevent improper value input
 
-### The Game consists of:
+### Gameplay components:
 #### User vs AI
 
 * A terminal with the title `Numberex` and `Enter your name:`
