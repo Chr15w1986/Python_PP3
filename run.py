@@ -108,7 +108,7 @@ I am not playing this game with you anymore!")
 
             # Loops indefinitely until the user selects a valid choice
         while computer_feedback not in ['c', 'l', 'h']:
-            computer_feedback = input(f'         My Turn!!..Is your number {guess} \n \
+            computer_feedback = input(f'         My Turn!!..Is your number {guess}? \n \
         too high(H), too low(L) or correct(C)?? \n')
 
             # If the user states the value is too high
