@@ -77,17 +77,15 @@ The upper number limit can be chosen by the user for personalised difficulty.
 
 ![Enter name](images/entername.png)
 
-* Once the user name has been entered, `Please choose upper limit` appears
+* Once the user name has been entered, the user is then presented with game rules
+    and `Please choose upper limit` appears
 
-![Enter name](images/chooseupperlimit.png)
+![Enter name](images/gamereulsandchoose.png)
 
 * The user has the option to choose the highest number they wish
 
 ![Enter name](images/enterhighnumber.png)
 
-* The user is then presented with game rules
-
-![Enter name](images/gamerules.png)
 
 * The game starts with `Make a guess between 1 and (number chosen)`
 
@@ -96,11 +94,11 @@ The upper number limit can be chosen by the user for personalised difficulty.
 * The user makes a guess, and the game checks if it is correct,
     If the user makes an incorrect guess, they lose a life and must guess again
 
-![Enter name](images/GuessesRemaining.png)
+![Enter name](images/guesscount.png)
 
 * If the user has run out of guesses, `Sorry, you ran out of guesses` AI tells the user the number and the game moves to AI guessing
 
-![Enter name](images/outofguesses.png)
+![Enter name](images/Outofguesses.png)
 
 * If the user made the correct guess, they win and the turn moves to AI guessing
 
@@ -109,32 +107,30 @@ The upper number limit can be chosen by the user for personalised difficulty.
 ### AI vs User
 
 * The user now thinks of a number between 1 and (original number chosen)
-* The AI asks the user `MY turn!! Is your number (AI Guess)`
+* The AI asks the user `..Is your number (AI Guess)?`
 
-![Enter name](images/AI-turn.png)
+![Enter name](images/AIfirstguess.png)
 
 * If the user thinks it is too high, press `h`
 
-![Enter name](images/toohighguess.png)
+![Enter name](images/AIguesstoohigh.png)
 
 * if too high, AI guesses again
 * If the user thinks it is too low, press `l`
 
-![Enter name](images/toolowguess.png)
+![Enter name](images/AIguesstoolow.png)
 
 * If too low, AI guesses again
 * If the user thinks the AI guess is correct, press `c`
 
-![Enter name](images/correctguess.png)
+![Enter name](images/AIguesscorrect.png)
 
 * If correct, AI shows off by telling you they won
 * Option for `Do you want to restart the game [Y/N]` appears
+* If the user enters `y`, A welcome back message appears and
+    game restarts to `Make a guess between 1 and (number chosen)`
 
 ![Enter name](images/gamerestart.png)
-
-* If the user enters `y`, Game restarts to `Make a guess between 1 and (number chosen)`
-
-![Enter name](images/restartYES.png)
 
 * If the user enters `n`, Game ends with `Thank you for playing Numberex!`
 
@@ -220,6 +216,9 @@ The upper number limit can be chosen by the user for personalised difficulty.
     
     - For the sake of this test the upper limit is 10. If I try to input a number outside of the set limits (1 to 10), 
         in this case `15000`, the issue is caught with the following message `Please choose a number between 1 and 10:`
+
+        ![outside of limits](images/outsideofguesslimits.png)
+
     - When the correct value is entered for this part of the game (a guess between 1 and 10) but the guess is too low,
         the game sees that the number is too low and prints out the statement `Sorry Chris, guess a little higher!`
     - The terminal prints again `Make a guess at a number between 1 and 10:`
@@ -248,7 +247,7 @@ The upper number limit can be chosen by the user for personalised difficulty.
         - With validation in my code I am able to catch a user forcing past the upper and lower limits with a 
             try/except rule and the following happens:
         
-        ![are you sure](images/Areyousure.png)
+        ![are you sure](images/areyousure.png)
     
     - If I input `too low(L)` one more time, the code is written to prevent cheating and the terminal prints a statement 
         - `I think you are cheating I am not playing this game with you anymore!`
@@ -265,14 +264,15 @@ The upper number limit can be chosen by the user for personalised difficulty.
     - When I type `n` The game simply ends with message `Thankyou for playing Numberex!`
     - For the sake of testing, If none of the above is true, (no cheating, no incorrect values etc) the AI has 
         infinite guesses to find the number I am thinking of
-        - This is flaw I came across while carrying out manual testing, I would like to in future development (with more time), 
+        - This is a flaw I came across while carrying out manual testing, I would like to in future development (with more time), 
             include AI guess limit function
     - If the number I am thinking of matches the AI guess, I input `correct(c)` and I am greeted with a message:
-        - `HAHA!! I guessed (number) The number you were thinking of.. I WIN!!` 
+        - `HAHA!! I guessed (number) The number you were thinking of.. I WIN!!`
         
-        ![correctguess2](images/correctguess(2).png)
+        ![correctguess2](images/AIguesscorrect.png)
     
-    - And finally the option to restart the game appears, If I press `y`, the loop starts again, if I press `n`, the game exits
+    - And finally the option to restart the game appears, If I press `y`, the loop starts again, if I press `n`, the game finishes
+        with the message `Thank you for playing Numberex!`
 
 ## Solved bugs and errors
 
