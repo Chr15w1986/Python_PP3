@@ -2,6 +2,8 @@
 
 # NUMBEREX
 
+![Main image](images/mainscreen.png)
+
 ## PURPOSE
 
 'Numberex' is a number guessing game where either, You the user guesses the AI number,
@@ -12,7 +14,7 @@ The project has been developed using Python programming language to create a com
 ## INITIAL IDEA CONCEPT
 
 My initial idea for the project was to create a number guessing game to play against the computer or let the computer guess the users number.
-The upper number limit can be chosen by the user for difficulty.
+The upper number limit can be chosen by the user for personalised difficulty.
 #  
 ## CONTENTS
 
