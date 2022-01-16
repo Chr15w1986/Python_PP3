@@ -70,44 +70,71 @@ The upper number limit can be chosen by the user for personalised difficulty.
 #### User vs AI
 
 * A terminal with the title `Numberex` and `Enter your name:`
-- ![Enter name](images/entername.png)
+
+![Enter name](images/entername.png)
+
 * Once the user name has been entered, `Please choose upper limit` appears
-- ![Enter name](images/chooseupperlimit.png)
+
+![Enter name](images/chooseupperlimit.png)
+
 * The user has the option to choose the highest number they wish
-- ![Enter name](images/enterhighnumber.png)
+
+![Enter name](images/enterhighnumber.png)
+
 * The user is then presented with game rules
-- ![Enter name](images/gamerules.png)
+
+![Enter name](images/gamerules.png)
+
 * The game starts with `Make a guess between 1 and (number chosen)`
-- ![Enter name](images/Makeaguess.png)
+
+![Enter name](images/Makeaguess.png)
+
 * The user makes a guess, and the game checks if it is correct,
     If the user makes an incorrect guess, they lose a life and must guess again
-- ![Enter name](images/GuessesRemaining.png)
+
+![Enter name](images/GuessesRemaining.png)
+
 * If the user has run out of guesses, `Sorry, you ran out of guesses` AI tells the user the number and the game moves to AI guessing
-- ![Enter name](images/outofguesses.png)
+
+![Enter name](images/outofguesses.png)
+
 * If the user made the correct guess, they win and the turn moves to AI guessing
-- ![Enter name](images/userwin.png)
+
+![Enter name](images/userwin.png)
 
 ### AI vs User
 
 * The user now thinks of a number between 1 and (original number chosen)
 * The AI asks the user `MY turn!! Is your number (AI Guess)`
-- ![Enter name](images/AI-turn.png)
+
+![Enter name](images/AI-turn.png)
+
 * If the user thinks it is too high, press `h`
-- ![Enter name](images/toohighguess.png)
+
+![Enter name](images/toohighguess.png)
+
 * if too high, AI guesses again
 * If the user thinks it is too low, press `l`
-- ![Enter name](images/toolowguess.png)
+
+![Enter name](images/toolowguess.png)
+
 * If too low, AI guesses again
 * If the user thinks the AI guess is correct, press `c`
-- ![Enter name](images/correctguess.png)
-* If correct, AI shows off by telling you they won
 
+![Enter name](images/correctguess.png)
+
+* If correct, AI shows off by telling you they won
 * Option for `Do you want to restart the game [Y/N]` appears
-- ![Enter name](images/gamerestart.png)
+
+![Enter name](images/gamerestart.png)
+
 * If the user enters `y`, Game restarts to `Make a guess between 1 and (number chosen)`
-- ![Enter name](images/restartYES.png)
+
+![Enter name](images/restartYES.png)
+
 * If the user enters `n`, Game ends with `Thank you for playing Numberex!`
-- ![Enter name](images/Thanksforplaying.png)
+
+![Enter name](images/Thanksforplaying.png)
 ### Future features:
 
 * Add AI Guesses (lives) left
