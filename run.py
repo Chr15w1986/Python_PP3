@@ -17,17 +17,19 @@ def end_game(num, name):
     The function will also check if the user wishes to make a choice on which
     game to restart.
     """
-    game_restart = input(f'{name}, Do you want to restart the game? [Y/N]')
+    game_restart = input(f'         {name}, Do you want \
+to restart the game? [Y/N]')
     while game_restart.lower() not in ['y', 'n']:
-        game_restart = input(f'{name}, Do you want to restart the game? [Y/N]')
+        game_restart = input(f'         {name}, Do you want \
+to restart the game? [Y/N]')
     if game_restart.lower() == 'y':
-        print(f'        Welcome back {name}!')
+        print(f'         Welcome back {name}!')
         user_guess(num, name)
         computer_guess(num, name)
         game_restart = input("Do you want to restart the game? [Y/N]")
     elif game_restart.lower() == 'n':
         # if the user does not want to restart, the game ends
-        print("Thank you for playing Numberex!")
+        print("         Thank you for playing Numberex!")
     sys.exit(0)
 
 
@@ -42,7 +44,8 @@ def user_guess(num, name):
     guess_limit = 5
     out_of_guesses = False
     while guess != random_number and not out_of_guesses:
-        guess = input(f'Make a guess at a number between 1 and {num}: ')
+        guess = input(f'         Make a guess at a number \
+between 1 and {num}: ')
         # Validation to check if the input is a number
         try:
             guess = int(guess)
@@ -51,13 +54,15 @@ def user_guess(num, name):
 
                 # User attempt loop
                 if guess < random_number:
-                    print(f'\nSorry {name}, Guess a little higher!\n')
-                    print(f'..Guesses remaining: {guess_limit-guess_count}\n')
+                    print(f'\n         Sorry {name}, Guess a little higher!\n')
+                    print(f'         ..Guesses \
+remaining: {guess_limit-guess_count}\n')
                 elif guess > random_number:
-                    print(f'\nSorry {name}, Guess a little lower!\n')
-                    print(f'..Guesses remaining: {guess_limit-guess_count}\n')
+                    print(f'\n         Sorry {name}, Guess a little lower!\n')
+                    print(f'         ..Guesses \
+remaining: {guess_limit-guess_count}\n')
                 else:
-                    print(f'Well done! You guessed the correct number: \
+                    print(f'         Well done! You guessed the correct number: \
 {random_number}\n')
                 # Checks how many lives are left, loops until zero
                 if guess_count < guess_limit:
@@ -65,14 +70,14 @@ def user_guess(num, name):
                 else:
                     out_of_guesses = True
                 if out_of_guesses:
-                    print(f'Sorry, you ran out of guesses. \
+                    print(f'         Sorry, you ran out of guesses. \
 My number was: {random_number}\n')
 
             else:
-                print(f'Please choose a number between 1 and {num}')
+                print(f'         Please choose a number between 1 and {num}')
         # To check if the value entered is a number
         except ValueError:
-            print(f'Sorry, {name}, that is not a number!')
+            print(f'         Sorry, {name}, that is not a number!')
 
 
 def computer_guess(num, name):
@@ -88,8 +93,8 @@ def computer_guess(num, name):
     while True:
         # If the user selects C
         if computer_feedback == 'c':
-            print(f'HAHA! I guessed {guess}, the number you\
- were thinking of..I WIN! ;-)\n')
+            print(f'         HAHA! I guessed {guess}, the number you \
+were thinking of..I WIN! ;-)\n')
             break
         # If the upper and lower limits do not match
         if low != high:
@@ -100,7 +105,7 @@ def computer_guess(num, name):
             # If the user has cheated (all the way up then all the way down)
             # Game prints a statment and breaks out of the loop
             except ValueError:
-                print(f"I think you are cheating {name}..\n \
+                print(f"         I think you are cheating {name}..\n \
 I am not playing this game with you anymore!")
                 break
         else:
@@ -109,7 +114,7 @@ I am not playing this game with you anymore!")
 
             # Loops indefinitely until the user selects a valid choice
         while computer_feedback not in ['c', 'l', 'h']:
-            computer_feedback = input(f'         My Turn!!..Is your number {guess}? \n \
+            computer_feedback = input(f'         ..Is your number {guess}? \n \
         too high(H), too low(L) or correct(C)?? \n')
 
             # If the user states the value is too high
@@ -119,7 +124,7 @@ I am not playing this game with you anymore!")
                 if high > 1 and guess != 1:
                     high = guess - 1
                 else:
-                    print("Are you sure? ")
+                    print("         Are you sure? ")
                     high = guess
                 break
 
@@ -130,7 +135,7 @@ I am not playing this game with you anymore!")
                 if low < num:
                     low = guess + 1
                 else:
-                    print("Are you sure? ")
+                    print("         Are you sure? ")
                 break
 
 
@@ -154,7 +159,7 @@ if __name__ == '__main__':
             user_number = int(input("         Please choose an upper limit: "))
             break
         except ValueError:
-            print("Please select a valid number")
+            print("         Please select a valid number")
 
     # Called functions for main game to run
     user_guess(user_number, user_name)
