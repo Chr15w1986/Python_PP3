@@ -21,6 +21,7 @@ The upper number limit can be chosen by the user for personalised difficulty.
 
 - [USER STORIES](#user-stories)
 - [FEATURES](#features)
+    - [Flowchart](#flowchart)
     - [Game Components](#the-game-consists-of)
         - [User vs AI](#user-vs-ai)
         - [AI vs User](#ai-vs-user)
@@ -28,7 +29,6 @@ The upper number limit can be chosen by the user for personalised difficulty.
     - [Images](#images)
     - [Typography](#typography)
 - [TESTING](#testing)
-    - [Flowchart](#flowchart)
     - [Validation](#validation)
         - [PEP8](#pep8-online-validation)
 - [MANUAL TESTING](#manual-testing)
@@ -58,6 +58,15 @@ The upper number limit can be chosen by the user for personalised difficulty.
     * Allow the user to guess a number between 1 and 10
     * To give an aspect of difficulty with 5 'lives' or attempts
     * If either game is lost or finished, the user will be presented with a restart game option
+
+## Flowchart
+
+<details>
+<summary>Gameplay Flowchart image</summary>
+<br>
+
+![Flow Chart](images/Flowchart.png)
+</details>
 
 ### The Game consists of:
 #### User vs AI
@@ -141,15 +150,6 @@ The upper number limit can be chosen by the user for personalised difficulty.
         the User vs AI with the original input difficulty. 
         If the user inputs `n` the game ends with a message 
         `Thank you for playing Numberex!`. Outcome: `Fulfilled.`
-
-## Flowchart
-
-<details>
-<summary>Gameplay Flowchart image</summary>
-<br>
-
-![Flow Chart](images/Flowchart.png)
-</details>
 
 ## Validation
 ### PEP8 Online Validation
