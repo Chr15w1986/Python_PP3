@@ -17,9 +17,10 @@ def end_game(num, name):
     The function will also check if the user wishes to make a choice on which
     game to restart.
     """
-    game_restart = input("Do you want to restart the game? [Y/N]")
+    game_restart = input(f'{name}, Do you want to restart the game? [Y/N]')
     while game_restart.lower() in ['y', 'n']:
         if game_restart == 'y':
+            print(f'        Welcome back {name}!')
             user_guess(num, name)
             computer_guess(num, name)
             game_restart = input("Do you want to restart the game? [Y/N]")
@@ -49,13 +50,13 @@ def user_guess(num, name):
 
                 # User attempt loop
                 if guess < random_number:
-                    print(f'\nSorry {name}, Guess a little higher!')
-                    print(f'Guesses remaining {guess_limit-guess_count}')
+                    print(f'\nSorry {name}, Guess a little higher!\n')
+                    print(f'..Guesses remaining: {guess_limit-guess_count}\n')
                 elif guess > random_number:
                     print(f'\nSorry {name}, Guess a little lower!\n')
-                    print(f'Guesses remaining {guess_limit-guess_count}')
+                    print(f'..Guesses remaining: {guess_limit-guess_count}\n')
                 else:
-                    print(f'Well done! You guessed the correct number \
+                    print(f'Well done! You guessed the correct number: \
 {random_number}\n')
                 # Checks how many lives are left, loops until zero
                 if guess_count < guess_limit:
@@ -98,7 +99,7 @@ def computer_guess(num, name):
             # If the user has cheated (all the way up then all the way down)
             # Game prints a statment and breaks out of the loop
             except ValueError:
-                print(f"I think you are cheating {name}..\
+                print(f"I think you are cheating {name}..\n \
 I am not playing this game with you anymore!")
                 break
         else:
@@ -139,6 +140,12 @@ if __name__ == '__main__':
         user_name = input("         Enter your name: ").strip()
         if len(user_name) > 0:
             break
+    print("         Hello " + user_name + ",  Welcome to Numberex!,\n \
+            * The game rules are simple,\n \
+            * Choose your upper number limit,\n \
+            * The higher the number, the harder the game!\n \
+            * Firstly, you try and guess the AI number.\n \
+            * Secondly, The AI will try and guess your number.\n ")
     while True:
         # Allows the user to choose difficulty by choosing an upper number
         try:
@@ -146,10 +153,6 @@ if __name__ == '__main__':
             break
         except ValueError:
             print("Please select a valid number")
-    print("         Hello " + user_name + ",  Welcome to Numberex!,\n \
-            * The game rules are simple,\n \
-            * Firstly, you try and guess the AI number.\n \
-            * Secondly, The AI will try and guess your number.\n ")
 
     # Called functions for main game to run
     user_guess(user_number, user_name)
