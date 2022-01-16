@@ -65,6 +65,9 @@ The upper number limit can be chosen by the user for personalised difficulty.
     * Allow the user to guess a number between 1 and (a number chosen by the user)
     * To give an aspect of difficulty with 5 'lives' or attempts
     * If either game is lost or finished, the user will be presented with a restart game option
+    * To provide a game where the User guesses the AI number and the AI then has a chance to guess 
+        the User's number
+    * Make sure any user input is validated to prevent improper value input
 
 ### The Game consists of:
 #### User vs AI
