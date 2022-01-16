@@ -18,16 +18,17 @@ def end_game(num, name):
     game to restart.
     """
     game_restart = input(f'{name}, Do you want to restart the game? [Y/N]')
-    while game_restart.lower() in ['y', 'n']:
-        if game_restart == 'y':
-            print(f'        Welcome back {name}!')
-            user_guess(num, name)
-            computer_guess(num, name)
-            game_restart = input("Do you want to restart the game? [Y/N]")
-        elif game_restart.lower() == 'n':
-            # if the user does not want to restart, the game ends
-            print("Thank you for playing Numberex!")
-            sys.exit(0)
+    while game_restart.lower() not in ['y', 'n']:
+        game_restart = input(f'{name}, Do you want to restart the game? [Y/N]')
+    if game_restart.lower() == 'y':
+        print(f'        Welcome back {name}!')
+        user_guess(num, name)
+        computer_guess(num, name)
+        game_restart = input("Do you want to restart the game? [Y/N]")
+    elif game_restart.lower() == 'n':
+        # if the user does not want to restart, the game ends
+        print("Thank you for playing Numberex!")
+    sys.exit(0)
 
 
 def user_guess(num, name):
