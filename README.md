@@ -41,7 +41,7 @@ The upper number limit can be chosen by the user for personalised difficulty.
         - [PEP8](#pep8-online-validation)
     - [Manual testing](#manual-testing)
     - [Solved bugs and errors](#solved-bugs-and-errors)
-    - [Unsolved bugs and errors](#unsolved-bugs-or-errors)
+    - [Unsolved bugs and errors](#unsolved-bugs-and-errors)
 - [TECHNOLOGIES](#technologies)
     - [Development](#development)
     - [Languages used](#languages-used)
