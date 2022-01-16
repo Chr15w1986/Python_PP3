@@ -141,11 +141,11 @@ if __name__ == '__main__':
         if len(user_name) > 0:
             break
     print("         Hello " + user_name + ",  Welcome to Numberex!,\n \
-            * The game rules are simple,\n \
-            * Choose your upper number limit,\n \
+            * The game rules are simple:\n \
+            * Choose your upper number limit\n \
             * The higher the number, the harder the game!\n \
-            * Firstly, you try and guess the AI number.\n \
-            * Secondly, The AI will try and guess your number.\n ")
+            * Firstly, you try and guess the AI number\n \
+            * Secondly, The AI will try and guess your number\n ")
     while True:
         # Allows the user to choose difficulty by choosing an upper number
         try:
