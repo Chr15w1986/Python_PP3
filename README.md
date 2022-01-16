@@ -192,12 +192,16 @@ The upper number limit can be chosen by the user for personalised difficulty.
     - The user is greeted with `Enter your name: `, Although it is out of my power for a user to input random letters or 
         characters rather than a name,
         I have made sure that any spaces before or after the input are stripped after the user presses enter. For example:
+        
         ![.strip()](images/usernamestrip.jpg)
+    
     - After enter is pressed, the users name should appear without whitespace along with the game rules
         This always prints at the start of the game after the user has input a name and pressed enter
     - At the same time the game rules print out to the terminal, a statement appears to enable the user to choose a high 
         number in order to make the game more difficult:
+        
         ![Upper limit validation](images/upperlimitvalidation.png)
+    
     - As you can see in the image above, I have input several letters, characters and combinations of both including numbers, 
         validation always catches the fact the input is not a number or integer, it prints the statement 
         `Please select a valid number` and then re-prints the statement `Please choose an upper limit: `
@@ -205,7 +209,9 @@ The upper number limit can be chosen by the user for personalised difficulty.
         enter is pressed and a new line with message `Make a guess at a number between 1 and 10:`
         - I have input words, strings of words, individual letters, characters, and pressed enter, but with validation, 
             I cannot input anything other than a number. A message appears `Sorry, Chris, That is not a number!`:
-        - ![Sorry not a number](images/guessentryvalidation.png)
+        
+        ![Sorry not a number](images/guessentryvalidation.png)
+    
     - For the sake of this test the upper limit is 10. If I try to input a number outside of the set limits (1 to 10), 
         in this case `15000`, the issue is caught with the following message `Please choose a number between 1 and 10:`
     - When the correct value is entered for this part of the game (a guess between 1 and 10) but the guess is too low,
@@ -216,7 +222,9 @@ The upper number limit can be chosen by the user for personalised difficulty.
         the game sees that the number is too high and prints out the statement `Sorry Chris, guess a little lower!`
     - The terminal prints again `Make a guess at a number between 1 and 10:`
     - The code then recognises two guesses have been made out of five and prints out `..Guesses Remaining: 3`
-    - ![guesses](images/Guessesremainingtest.png)
+    
+    ![guesses](images/Guessesremainingtest.png)
+    
     - If I keep inputting the same number until the lives have run out, The terminal prints, 
         - `Sorry you ran out of guesses, my number was: (example number)`
         - Then the game moves to the AI guessing my number.
@@ -233,10 +241,14 @@ The upper number limit can be chosen by the user for personalised difficulty.
     - Again, my input was `too low(L)`
         - With validation in my code I am able to catch a user forcing past the upper and lower limits with a 
             try/except rule and the following happens:
-        - ![are you sure](images/Areyousure.png)
+        
+        ![are you sure](images/Areyousure.png)
+    
     - If I input `too low(L)` one more time, the code is written to prevent cheating and the terminal prints a statement 
         - `I think you are cheating I am not playing this game with you anymore!`
-        - ![cheating](images/cheating.png)
+        
+        ![cheating](images/cheating.png)
+    
     - This test is also the same when entering `too high(H)` and trying to force the AI past 1 and lower.
     - The game then ends with a final statement `Chris, Do you want to restart the game? [Y/N]`
         - If I input anything other than `y` or `n` the game exits and the `"RUN PROGRAM"` button must be pressed to start the game again.
@@ -251,7 +263,9 @@ The upper number limit can be chosen by the user for personalised difficulty.
             include AI guess limit function.
     - If the number I am thinking of matches the AI guess, I input `correct(c)` and I am greeted with a message:
         - `HAHA!! I guessed (number) The number you were thinking of.. I WIN!!` 
-        - ![correctguess2](images/correctguess(2).png)
+        
+        ![correctguess2](images/correctguess(2).png)
+    
     - And finally the option to restart the game appears, If I press `y`, the loop starts again, if I press `n`, the game exits.
 
 ## Solved bugs and errors
