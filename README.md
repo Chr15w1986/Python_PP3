@@ -149,6 +149,8 @@ The upper number limit can be chosen by the user for difficulty.
 ![PEP8 Results - run.py](images/PEP8.png)
 </details>
 
+## Manual testing
+
 
 ## Solved bugs and errors
 
@@ -158,6 +160,15 @@ The upper number limit can be chosen by the user for difficulty.
     Not enough whitespace between functions,
     Invalid syntax errors,
     Imported but unused errors.
+    
+
+* Found issue with `AI vs user`, where there was a double input of the user controls of `H L or C`, for example,
+    if the user is thinking of 5 and AI guessed 4, I would input H for higher, but two H H would appear on seperate lines.
+    This was fixed by removing a duplicate print() statement.
+* Found an issue with restart game function, the option to restart the game would appear during the `AI vs User` game, 
+    or wouldn't appear at all.
+    This was a complete oversight, I had simply placed the function at the end of the file, logically, the `end_game()` function needed to be placed above `user_guess` and `computer_guess` functions in order to be called last.
+    Importing `sys` for `sys.exit()` also cured the issue of the game not ending in the same function.
 * Any duplicate or unused code, comments etc have been removed
 * Any irrelevant space in between code has been removed
 
@@ -165,9 +176,6 @@ The upper number limit can be chosen by the user for difficulty.
 
 * All previous errors during the development process have been resolved
 
-## Manual testing
-
-* still to do #####################################
 
 #
 # TECHNOLOGIES
@@ -298,11 +306,7 @@ If you need to make a local clone:
 - Dave Horrocks [DaveyJH](https://github.com/daveyjh), Again! for giving me time out of his own studies, for his patience, helping me above and beyond.
 - Shellie Downie [ShellieD](https://github.com/shellieD), For her support, Pointing out an obvious issue with my code so quickly.. TWICE! after hours of staring at it and looking straight over the problem.
 - My family for their support, patience and testing!!
-- My wonderful fiancée for being my personal spell checker and for listening to me when I need to rant!
+- My wonderful fiancée for being my personal spell checker/Grammer police and for listening to me when I need to rant!
 - Everybody on Slack for tips, advice, quick fixes and support
 
 #### RETURN TO THE [TOP](#numberex)
-issues:
-found issue with user vs AI where the user would guess a number between 1 and 10 but if the user guessed 10, AI would say higher, or if user guessed 1 the AI would say lower.
-
-found issue with AI vs user, where there was a double input of the user controls of H L or C, for example, if the user is thinking of 5 and AI guessed 4, I would input H for higher, but two H H would appear on seperate lines.
