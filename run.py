@@ -144,6 +144,7 @@ if __name__ == '__main__':
             * The game rules are simple:\n \
             * Choose your upper number limit\n \
             * The higher the number, the harder the game!\n \
+            * You have 5 attempts to guess the number\n \
             * Firstly, you try and guess the AI number\n \
             * Secondly, The AI will try and guess your number\n ")
     while True:
