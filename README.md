@@ -266,6 +266,16 @@ The upper number limit can be chosen by the user for personalised difficulty.
 
 * The project was written using [PYTHON3](https://en.wikipedia.org/wiki/Python_(programming_language))
 
+## LIBRARIES USED
+
+* Pyfiglet
+    - This library was used to create the ASCII art for the title upon loading the game
+        
+* Random
+    - randint was used to generate a random number for the game
+
+* Sys
+    - sys was imported for the exit and restart function of the game
 #
 # DEPLOYMENT
 
