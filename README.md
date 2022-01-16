@@ -154,7 +154,7 @@ The upper number limit can be chosen by the user for personalised difficulty.
 ### Typography
 
 * The project uses [Pyfiglet](http://www.figlet.org/examples.html) for the ascii art (title)
-* Otherwise, Standard terminal font, cannot be changed.
+* Otherwise, Standard terminal font, cannot be changed
 # 
 
 # TESTING
@@ -170,7 +170,7 @@ The upper number limit can be chosen by the user for personalised difficulty.
 * `As a user, I want a choice of games`:
     * I have provided two games that run consecutively,
         First: User to guess the AI number
-        Second: Ai to guess User number. Outcome: `Fulfilled.`
+        Second: AI to guess User number. Outcome: `Fulfilled.`
 * `As a user, I want to be able to see how many lives I have left`:
     * After each guess from the user, the terminal will print how many lives (guesses)
         the user has remaining, counting down from five. Outcome: `Fulfilled.`
@@ -255,7 +255,7 @@ The upper number limit can be chosen by the user for personalised difficulty.
         
         ![cheating](images/cheating.png)
     
-    - This test is also the same when entering `too high(H)` and trying to force the AI past 1 and lower.
+    - This test is also the same when entering `too high(H)` and trying to force the AI past 1 and lower
     - The game then ends with a final statement `Chris, Do you want to restart the game? [Y/N]`
         - If I input anything other than `y` or `n`, input validation has been written to prevent an invalid character 
             or letter apart from `y` or `n`
@@ -264,15 +264,15 @@ The upper number limit can be chosen by the user for personalised difficulty.
         - This is something I would like to implement for future development of the game
     - When I type `n` The game simply ends with message `Thankyou for playing Numberex!`
     - For the sake of testing, If none of the above is true, (no cheating, no incorrect values etc) the AI has 
-        infinite guesses to find the number I am thinking of.
+        infinite guesses to find the number I am thinking of
         - This is flaw I came across while carrying out manual testing, I would like to in future development (with more time), 
-            include AI guess limit function.
+            include AI guess limit function
     - If the number I am thinking of matches the AI guess, I input `correct(c)` and I am greeted with a message:
         - `HAHA!! I guessed (number) The number you were thinking of.. I WIN!!` 
         
         ![correctguess2](images/correctguess(2).png)
     
-    - And finally the option to restart the game appears, If I press `y`, the loop starts again, if I press `n`, the game exits.
+    - And finally the option to restart the game appears, If I press `y`, the loop starts again, if I press `n`, the game exits
 
 ## Solved bugs and errors
 
