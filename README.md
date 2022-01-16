@@ -28,7 +28,8 @@ The upper number limit can be chosen by the user for difficulty.
 - [TESTING](#testing)
     - [Flowchart](#flowchart)
     - [Validation](#validation)
-    - [PEP8](#pep8-online-validation)
+        - [PEP8](#pep8-online-validation)
+- [MANUAL TESTING](#manual-testing)
     - [Solved bugs and errors](#solved-bugs-and-errors)
     - [Unsolved bugs and errors](#unsolved-bugs-or-errors)
 
@@ -151,26 +152,92 @@ The upper number limit can be chosen by the user for difficulty.
 ![PEP8 Results - run.py](images/PEP8.png)
 </details>
 
-## Manual testing
+# MANUAL TESTING
 
+- Upon loading the game screen terminal:
+    - The user is greeted with `Enter your name: `, Although it is out of my power for a user to input random letters or 
+        characters rather than a name,
+        I have made sure that any spaces before or after the input are stripped after the user presses enter. For example:
+        ![.strip()](images/usernamestrip.jpg)
+    - After enter is pressed, the users name should appear without whitespace along with the game rules
+        This always prints at the start of the game after the user has input a name and pressed enter
+    - At the same time the game rules print out to the terminal, a statement appears to enable the user to choose a high 
+        number in order to make the game more difficult:
+        ![Upper limit validation](images/upperlimitvalidation.png)
+    - As you can see in the image above, I have input several letters, characters and combinations of both including numbers, 
+        validation always catches the fact the input is not a number or integer, it prints the statement 
+        `Please select a valid number` and then re-prints the statement `Please choose an upper limit: `
+    - When the correct value (number) is input into the terminal for `Please choose an upper limit: ` i.e. `10`, 
+        enter is pressed and a new line with message `Make a guess at a number between 1 and 10:`
+        - I have input words, strings of words, individual letters, characters, and pressed enter, but with validation, 
+            I cannot input anything other than a number. A message appears `Sorry, Chris, That is not a number!`:
+        - ![Sorry not a number](images/guessentryvalidation.png)
+    - For the sake of this test the upper limit is 10. If I try to input a number outside of the set limits (1 to 10), 
+        in this case `15000`, the issue is caught with the following message `Please choose a number between 1 and 10:`
+    - When the correct value is entered for this part of the game (a guess between 1 and 10) but the guess is too low,
+        the game sees that the number is too low and prints out the statement `Sorry Chris, guess a little higher!`
+    - The terminal prints again `Make a guess at a number between 1 and 10:`
+    - The code then recognises one guess has been made out of five and prints out `..Guesses Remaining: 4`
+    - When the correct value is entered but the guess is too high,
+        the game sees that the number is too high and prints out the statement `Sorry Chris, guess a little lower!`
+    - The terminal prints again `Make a guess at a number between 1 and 10:`
+    - The code then recognises two guesses have been made out of five and prints out `..Guesses Remaining: 3`
+    - ![guesses](images/Guessesremainingtest.png)
+    - If I keep inputting the same number until the lives have run out, The terminal prints, 
+        - `Sorry you ran out of guesses, my number was: (example number)`
+        - Then the game moves to the AI guessing my number.
+    - But, if I guess the correct number within the limits, I win with a message 
+        - `Well done, You guessed the correct number: (Example number)`
+    
+- The next part of the game is, I have to guess the number the AI is thinking of,
+    - `My Turn!!.. Is your number (in this case) 9?`
+            - `too high(H) too low(L) correct(C)`
+    - For this test I forced the AI higher by the input of `too low(L)`
+    - The AI printed:
+    - `My Turn!!.. Is your number 10?`
+        - `too high(H) too low(L) correct(C)`
+    - Again, my input was `too low(L)`
+        - With validation in my code I am able to catch a user forcing past the upper and lower limits with a 
+            try/except rule and the following happens:
+        - ![are you sure](images/Areyousure.png)
+    - If I input `too low(L)` one more time, the code is written to prevent cheating and the terminal prints a statement 
+        - `I think you are cheating I am not playing this game with you anymore!`
+        - ![cheating](images/cheating.png)
+    - This test is also the same when entering `too high(H)` and trying to force the AI past 1 and lower.
+    - The game then ends with a final statement `Chris, Do you want to restart the game? [Y/N]`
+        - If I input anything other than `y` or `n` the game exits and the `"RUN PROGRAM"` button must be pressed to start the game again.
+            - This is a flaw that needs validation to prevent the user inputting a value anything other than `y` or `n`
+    - When I type `y`, The code has stored the name to reinsert into the print statement `Welcome back, (name)!`
+    - The game then loops back to the `User vs AI` But this time there is no option to input a higher number,
+        - This is something I would like to implement for future development of the game
+    - When I type `n` The game simply ends with message `Thankyou for playing Numberex!`
+    - For the sake of testing, If none of the above is true, (no cheating, no incorrect values etc) the AI has 
+        infinite guesses to find the number I am thinking of.
+        - This is flaw I came across while carrying out manual testing, I would like to in future development (with more time), 
+            include AI guess limit function.
+    - If the number I am thinking of matches the AI guess, I input `correct(c)` and I am greeted with a message:
+        - `HAHA!! I guessed (number) The number you were thinking of.. I WIN!!` 
+        - ![correctguess2](images/correctguess(2).png)
+    - And finally the option to restart the game appears, If I press `y`, the loop starts again, if I press `n`, the game exits.
 
 ## Solved bugs and errors
 
-* Throughout the development of this project, several automated errors have been fixed i.e.
-    - Indentation errors,
-    - Undefined variable name,
-    - Not enough whitespace between functions,
-    - Invalid syntax errors,
-    - Imported but unused errors.
+* Throughout the development of this project, several automated (flake8) errors have been fixed i.e.
+    - Indentation errors
+    - Undefined variable name
+    - Not enough whitespace between functions
+    - No new line at end of file
+    - Invalid syntax errors
+    - Imported but unused errors
     
 
 * Found an issue with `AI vs user`, where there was a double input of the user controls of `H L or C`, for example,
     if the user is thinking of 5 and AI guessed 4, the user would input H for higher, but two H H would appear on seperate lines.
-    This was fixed by removing a missed duplicate print() statement.
+    - This was fixed by removing a missed duplicate print() statement.
 * Found an issue with restart game function, the option to restart the game would appear during the `AI vs User` game,
     or wouldn't appear at all.
-    This was a complete oversight, I had simply placed the function at the end of the file, logically, the `end_game()` function needed to be placed above `user_guess` and `computer_guess` functions in order to be called after the game ended.
-    Importing `sys` for `sys.exit()` also cured the issue of the game not ending in the same function.
+    - This was a complete oversight, I had simply placed the function at the end of the file, logically, the `end_game()` function needed to be placed above `user_guess` and `computer_guess` functions in order to be called after the game ended.
+    - Importing `sys` for `sys.exit()` also cured the issue of the game not ending in the same function.
 * Any duplicate or unused code, comments etc have been removed
 * Any irrelevant space in between code has been removed
 
