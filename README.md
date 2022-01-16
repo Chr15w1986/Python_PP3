@@ -36,9 +36,10 @@ The upper number limit can be chosen by the user for personalised difficulty.
     - [Images](#images)
     - [Typography](#typography)
 - [TESTING](#testing)
+    - [User story testing](#user-story-testing)
     - [Validation](#validation)
         - [PEP8](#pep8-online-validation)
-- [MANUAL TESTING](#manual-testing)
+    - [Manual testing](#manual-testing)
     - [Solved bugs and errors](#solved-bugs-and-errors)
     - [Unsolved bugs and errors](#unsolved-bugs-or-errors)
 - [TECHNOLOGIES](#technologies)
@@ -158,6 +159,8 @@ The upper number limit can be chosen by the user for personalised difficulty.
 
 # TESTING
 
+## User story testing
+
 * `As a user, I want the game to have varying difficulty`:
     *  After the user inputs his/her name, The option to choose `highest number` will appear to
         provide a personalised level of difficulty. Outcome: `Fulfilled.`
@@ -189,7 +192,7 @@ The upper number limit can be chosen by the user for personalised difficulty.
 ![PEP8 Results - run.py](images/PEP8.png)
 </details>
 
-# MANUAL TESTING
+## Manual testing
 
 - Upon loading the game screen terminal:
     - The user is greeted with `Enter your name: `, Although it is out of my power for a user to input random letters or 
@@ -254,8 +257,8 @@ The upper number limit can be chosen by the user for personalised difficulty.
     
     - This test is also the same when entering `too high(H)` and trying to force the AI past 1 and lower.
     - The game then ends with a final statement `Chris, Do you want to restart the game? [Y/N]`
-        - If I input anything other than `y` or `n` the game exits and the `"RUN PROGRAM"` button must be pressed to start the game again.
-            - This is a flaw that needs validation to prevent the user inputting a value anything other than `y` or `n`
+        - If I input anything other than `y` or `n`, input validation has been written to prevent an invalid character 
+            or letter apart from `y` or `n`
     - When I type `y`, The code has stored the name to reinsert into the print statement `Welcome back, (name)!`
     - The game then loops back to the `User vs AI` But this time there is no option to input a higher number,
         - This is something I would like to implement for future development of the game
@@ -296,8 +299,6 @@ The upper number limit can be chosen by the user for personalised difficulty.
 
 * When the game comes to an end and the user requests to restart the game, the game loops back to User vs AI, 
     without the possibility of inputting a new number for difficulty purposes. The game does run as normal apart from this issue
-* If the user types anything other than `y` or `n` at the restart game section, the game just exits and the only way to play again
-    is to press the run program button at the top of the page
 * All previously known errors during the development process have been resolved
 
 
