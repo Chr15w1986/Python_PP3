@@ -13,13 +13,22 @@
 
 My initial idea for the project was to create a number guessing game to play against the computer or let the computer guess the user's number.
 The upper number limit can be chosen by the user for personalised difficulty.
+
+## Flowchart
+
+<details>
+<summary>Gameplay Flowchart image</summary>
+<br>
+
+![Flow Chart](images/Flowchart.png)
+</details>
+
 #  
 ## CONTENTS
 
 
 - [USER STORIES](#user-stories)
 - [FEATURES](#features)
-    - [Flowchart](#flowchart)
     - [Game Components](#the-game-consists-of)
         - [User vs AI](#user-vs-ai)
         - [AI vs User](#ai-vs-user)
@@ -56,15 +65,6 @@ The upper number limit can be chosen by the user for personalised difficulty.
     * Allow the user to guess a number between 1 and (a number chosen by the user)
     * To give an aspect of difficulty with 5 'lives' or attempts
     * If either game is lost or finished, the user will be presented with a restart game option
-
-## Flowchart
-
-<details>
-<summary>Gameplay Flowchart image</summary>
-<br>
-
-![Flow Chart](images/Flowchart.png)
-</details>
 
 ### The Game consists of:
 #### User vs AI
