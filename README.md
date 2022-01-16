@@ -6,14 +6,12 @@
 
 ## PURPOSE
 
-'Numberex' is a number guessing game where either, You the user guesses the AI number,
-or the AI tries to guess the number you are thinking of.
-The project has been developed using Python programming language to create a command line app that will demonstrate the skills I have learnt.
+'Numberex' is a number guessing game where either you (the user) guesses the AI number, or the AI tries to guess the number you are thinking of. The project has been developed using the Python programming language to create a command line application that demonstrates the skills I have learnt.
 * Here is a link to the [final project](https://numberex.herokuapp.com/)
 
 ## INITIAL IDEA CONCEPT
 
-My initial idea for the project was to create a number guessing game to play against the computer or let the computer guess the users number.
+My initial idea for the project was to create a number guessing game to play against the computer or let the computer guess the user's number.
 The upper number limit can be chosen by the user for personalised difficulty.
 #  
 ## CONTENTS
@@ -55,7 +53,7 @@ The upper number limit can be chosen by the user for personalised difficulty.
 ## FEATURES
 
 * The Features I want the game to have are:
-    * Allow the user to guess a number between 1 and 10
+    * Allow the user to guess a number between 1 and (a number chosen by the user)
     * To give an aspect of difficulty with 5 'lives' or attempts
     * If either game is lost or finished, the user will be presented with a restart game option
 
