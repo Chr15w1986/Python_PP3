@@ -245,6 +245,10 @@ The upper number limit can be chosen by the user for personalised difficulty.
 
 ## Unsolved bugs and errors
 
+* When the game comes to an end and the user requests to restart the game, the game loops back to User vs AI, 
+    without the possibility of inputting a new number for difficulty purposes. The game does run as normal apart from this issue
+* If the user types anything other than `y` or `n` at the restart game section, the game just exits and the only way to play again
+    is to press the run program button at the top of the page
 * All previously known errors during the development process have been resolved
 
 
