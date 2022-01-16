@@ -99,12 +99,14 @@ The upper number limit can be chosen by the user for difficulty.
 
 
 ### Images
-    * There is one background image, for aesthetics only
+
+* There is one background image, for aesthetics only
     [IStockphoto](https://www.istockphoto.com/search/2/image?phrase=numbers)
 
 ### Typography
-    * The project uses [Pyfiglet](http://www.figlet.org/examples.html) for the ascii art (title)
-    * Otherwise, Standard terminal font, cannot be changed.
+
+* The project uses [Pyfiglet](http://www.figlet.org/examples.html) for the ascii art (title)
+* Otherwise, Standard terminal font, cannot be changed.
 # 
 
 # TESTING
@@ -154,27 +156,27 @@ The upper number limit can be chosen by the user for difficulty.
 
 ## Solved bugs and errors
 
-* Throughout the build of this project several automated errors have been fixed i.e.
-    Indentation errors,
-    Undefined variable name,
-    Not enough whitespace between functions,
-    Invalid syntax errors,
-    Imported but unused errors.
+* Throughout the development of this project, several automated errors have been fixed i.e.
+    - Indentation errors,
+    - Undefined variable name,
+    - Not enough whitespace between functions,
+    - Invalid syntax errors,
+    - Imported but unused errors.
     
 
-* Found issue with `AI vs user`, where there was a double input of the user controls of `H L or C`, for example,
-    if the user is thinking of 5 and AI guessed 4, I would input H for higher, but two H H would appear on seperate lines.
-    This was fixed by removing a duplicate print() statement.
-* Found an issue with restart game function, the option to restart the game would appear during the `AI vs User` game, 
+* Found an issue with `AI vs user`, where there was a double input of the user controls of `H L or C`, for example,
+    if the user is thinking of 5 and AI guessed 4, the user would input H for higher, but two H H would appear on seperate lines.
+    This was fixed by removing a missed duplicate print() statement.
+* Found an issue with restart game function, the option to restart the game would appear during the `AI vs User` game,
     or wouldn't appear at all.
-    This was a complete oversight, I had simply placed the function at the end of the file, logically, the `end_game()` function needed to be placed above `user_guess` and `computer_guess` functions in order to be called last.
+    This was a complete oversight, I had simply placed the function at the end of the file, logically, the `end_game()` function needed to be placed above `user_guess` and `computer_guess` functions in order to be called after the game ended.
     Importing `sys` for `sys.exit()` also cured the issue of the game not ending in the same function.
 * Any duplicate or unused code, comments etc have been removed
 * Any irrelevant space in between code has been removed
 
 ## Unsolved bugs and errors
 
-* All previous errors during the development process have been resolved
+* All previously known errors during the development process have been resolved
 
 
 #
