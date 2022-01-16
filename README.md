@@ -6,13 +6,13 @@
 
 ## PURPOSE
 
-'Numberex' is a number guessing game where either you (the user) guesses the AI number, or the AI tries to guess the number you are thinking of. The project has been developed using the Python programming language to create a command line application that demonstrates the skills I have learnt.
+'Numberex' is a number guessing game where either you (the User) guesses the AI number, or the AI tries to guess the number you are thinking of. The project has been developed using the Python programming language to create a command line application that demonstrates the skills I have learnt.
 * Here is a link to the [final project](https://numberex.herokuapp.com/)
 
 ## INITIAL IDEA CONCEPT
 
-My initial idea for the project was to create a number guessing game to play against the computer or let the computer guess the user's number.
-The upper number limit can be chosen by the user for personalised difficulty.
+My initial idea for the project was to create a number guessing game to play against the computer or let the computer guess the User's number.
+The upper number limit can be chosen by the User for personalised difficulty.
 
 ## Flowchart
 
@@ -54,21 +54,21 @@ The upper number limit can be chosen by the user for personalised difficulty.
 
 ## USER STORIES
 
-* As a user, I want the game to have varying difficulty
-* As a user, I want to easily understand the main purpose of the game
-* As a user, I want a choice of games
-* As a user, I want to be able to see how many lives I have left
-* As a user, I want the option to play again
+* As a User, I want the game to have varying difficulty
+* As a User, I want to easily understand the main purpose of the game
+* As a User, I want a choice of games
+* As a User, I want to be able to see how many lives I have left
+* As a User, I want the option to play again
 
 ## FEATURES
 
 * The Features I want the game to have are:
-    * Allow the user to guess a number between 1 and (a number chosen by the user)
+    * Allow the User to guess a number between 1 and (a number chosen by the User)
     * To give an aspect of difficulty with 5 'lives' or attempts
-    * If either game is lost or finished, the user will be presented with a restart game option
+    * If either game is lost or finished, the User will be presented with a restart game option
     * To provide a game where the User guesses the AI number and the AI then has a chance to guess 
         the User's number
-    * Make sure any user input is validated to prevent improper value input
+    * Make sure any User input is validated to prevent improper value input
 
 ### Gameplay components:
 #### User vs AI
@@ -77,12 +77,12 @@ The upper number limit can be chosen by the user for personalised difficulty.
 
 ![Enter name](images/entername.png)
 
-* Once the user name has been entered, the user is then presented with game rules
+* Once the User name has been entered, the User is then presented with game rules
     and `Please choose upper limit` appears
 
 ![Enter name](images/gamereulsandchoose.png)
 
-* The user has the option to choose the highest number they wish
+* The User has the option to choose the highest number they wish
 
 ![Enter name](images/enterhighnumber.png)
 
@@ -91,48 +91,48 @@ The upper number limit can be chosen by the user for personalised difficulty.
 
 ![Enter name](images/Makeaguess.png)
 
-* The user makes a guess, and the game checks if it is correct,
-    If the user makes an incorrect guess, they lose a life and must guess again
+* The User makes a guess, and the game checks if it is correct,
+    If the User makes an incorrect guess, they lose a life and must guess again
 
 ![Enter name](images/guesscount.png)
 
-* If the user has run out of guesses, `Sorry, you ran out of guesses` AI tells the user the number and the game moves to AI guessing
+* If the User has run out of guesses, `Sorry, you ran out of guesses` AI tells the User the number and the game moves to AI guessing
 
 ![Enter name](images/Outofguesses.png)
 
-* If the user made the correct guess, they win and the turn moves to AI guessing
+* If the User made the correct guess, they win and the turn moves to AI guessing
 
 ![Enter name](images/userwin.png)
 
 ### AI vs User
 
-* The user now thinks of a number between 1 and (original number chosen)
-* The AI asks the user `..Is your number (AI Guess)?`
+* The User now thinks of a number between 1 and (original number chosen)
+* The AI asks the User `..Is your number (AI Guess)?`
 
 ![Enter name](images/AIfirstguess.png)
 
-* If the user thinks it is too high, press `h`
+* If the User thinks it is too high, press `h`
 
 ![Enter name](images/AIguesstoohigh.png)
 
 * if too high, AI guesses again
-* If the user thinks it is too low, press `l`
+* If the User thinks it is too low, press `l`
 
 ![Enter name](images/AIguesstoolow.png)
 
 * If too low, AI guesses again
-* If the user thinks the AI guess is correct, press `c`
+* If the User thinks the AI guess is correct, press `c`
 
 ![Enter name](images/AIguesscorrect.png)
 
 * If correct, AI shows off by telling you they won
 * Option for `Do you want to restart the game [Y/N]` appears
-* If the user enters `y`, A welcome back message appears and
+* If the User enters `y`, A welcome back message appears and
     game restarts to `Make a guess between 1 and (number chosen)`
 
 ![Enter name](images/gamerestart.png)
 
-* If the user enters `n`, Game ends with `Thank you for playing Numberex!`
+* If the User enters `n`, Game ends with `Thank you for playing Numberex!`
 
 ![Enter name](images/Thanksforplaying.png)
 ### Future features:
@@ -157,25 +157,25 @@ The upper number limit can be chosen by the user for personalised difficulty.
 
 ## User story testing
 
-* `As a user, I want the game to have varying difficulty`:
-    *  After the user inputs his/her name, The option to choose `highest number` will appear to
+* `As a User, I want the game to have varying difficulty`:
+    *  After the User inputs his/her name, The option to choose `highest number` will appear to
         provide a personalised level of difficulty. Outcome: `Fulfilled.`
-* `As a user, I want to easily understand the main purpose of the game`:
-    * Once the user has entered his/her name, and made a choice of difficulty, 
+* `As a User, I want to easily understand the main purpose of the game`:
+    * Once the User has entered his/her name, and made a choice of difficulty, 
         there will be a paragraph on what the game entails. Outcome: `Fulfilled.`
-* `As a user, I want a choice of games`:
+* `As a User, I want a choice of games`:
     * I have provided two games that run consecutively,
         First: User to guess the AI number
         Second: AI to guess User number. Outcome: `Fulfilled.`
-* `As a user, I want to be able to see how many lives I have left`:
-    * After each guess from the user, the terminal will print how many lives (guesses)
-        the user has remaining, counting down from five. Outcome: `Fulfilled.`
-* `As a user, I want the option to play again`:
+* `As a User, I want to be able to see how many lives I have left`:
+    * After each guess from the User, the terminal will print how many lives (guesses)
+        the User has remaining, counting down from five. Outcome: `Fulfilled.`
+* `As a User, I want the option to play again`:
     * I have provided an option at the end of the game that asks 
         `Do you want to restart the game? [Y/N]`
-        If the user inputs `y`, the game restarts to 
+        If the User inputs `y`, the game restarts to 
         the User vs AI with the original input difficulty. 
-        If the user inputs `n` the game ends with a message 
+        If the User inputs `n` the game ends with a message 
         `Thank you for playing Numberex!`. Outcome: `Fulfilled.`
 
 ## Validation
@@ -191,15 +191,15 @@ The upper number limit can be chosen by the user for personalised difficulty.
 ## Manual testing
 
 - Upon loading the game screen terminal:
-    - The user is greeted with `Enter your name: `, Although it is out of my power for a user to input random letters or 
+    - The User is greeted with `Enter your name: `, Although it is out of my power for a User to input random letters or 
         characters rather than a name,
-        I have made sure that any spaces before or after the input are stripped after the user presses enter. For example:
+        I have made sure that any spaces before or after the input are stripped after the User presses enter. For example:
         
         ![.strip()](images/usernamestrip.jpg)
     
-    - After enter is pressed, the users name should appear without whitespace along with the game rules
-        This always prints at the start of the game after the user has input a name and pressed enter
-    - At the same time the game rules print out to the terminal, a statement appears to enable the user to choose a high 
+    - After enter is pressed, the Users name appears without whitespace along with the game rules
+        This always prints at the start of the game after the User has input a name and pressed enter
+    - At the same time the game rules print out to the terminal, a statement appears to enable the User to choose a high 
         number in order to make the game more difficult:
         
         ![Upper limit validation](images/upperlimitvalidation.png)
@@ -285,8 +285,8 @@ The upper number limit can be chosen by the user for personalised difficulty.
     - Imported but unused errors
     
 
-* Found an issue with `AI vs user`, where there was a double input of the user controls of `H L or C`, for example,
-    if the user is thinking of 5 and AI guessed 4, the user would input H for higher, but two H H would appear on seperate lines.
+* Found an issue with `AI vs User`, where there was a double input of the User controls of `H L or C`, for example,
+    if the User is thinking of 5 and AI guessed 4, the User would input H for higher, but two H H would appear on seperate lines.
     - This was fixed by removing a missed duplicate print() statement.
 * Found an issue with restart game function, the option to restart the game would appear during the `AI vs User` game,
     or wouldn't appear at all.
@@ -297,7 +297,7 @@ The upper number limit can be chosen by the user for personalised difficulty.
 
 ## Unsolved bugs and errors
 
-* When the game comes to an end and the user requests to restart the game, the game loops back to User vs AI, 
+* When the game comes to an end and the User requests to restart the game, the game loops back to User vs AI, 
     without the possibility of inputting a new number for difficulty purposes. The game does run as normal apart from this issue
 * All previously known errors during the development process have been resolved
 
@@ -427,21 +427,21 @@ If you need to make a local clone:
 
 ### CODE
 
-* [W3Schools](https://www.w3schools.com/) for an interesting read on python functions and how they can be implemented.
-* [Stackoverflow](https://stackoverflow.com/questions/57409696/imported-but-unused-in-python) For an unused import error I was experiencing.
+* [W3Schools](https://www.w3schools.com/) for an interesting read on python functions and how they can be implemented
+* [Stackoverflow](https://stackoverflow.com/questions/57409696/imported-but-unused-in-python) For an unused import error I was experiencing
 * [Stackoverflow](https://stackoverflow.com/questions/27076239/adding-scoring-system-to-a-number-guessing-game-including-play-again)
-    For a rough guide on how to implement a restart game function.
+    For a rough guide on how to implement a restart game function
 
 #
 ## ACKNOWLEDGEMENTS:
 
 - Code institute for the amazing Tutors on the course
-- My brilliant Mentor Ben Kavanagh, [BAK2K3](https://github.com/BAK2K3) for his brilliant advice on my code, Pushing me back on track 
-    when I start to lose faith, Taking time out of his own day and duties to answer ALL of my questions with utter perfection!
-- Dave Horrocks [DaveyJH](https://github.com/daveyjh), Again! for giving me time out of his own studies, for his patience, helping me above and beyond.
-- Shellie Downie [ShellieD](https://github.com/shellieD), For her support, Pointing out an obvious issue with my code so quickly.. TWICE! after hours of staring at it and looking straight over the problem.
+- My brilliant Mentor Ben Kavanagh, [BAK2K3](https://github.com/BAK2K3) for his advice on my code, pushing me back on track 
+    when I start to lose faith, taking time out of his own day and duties to answer ALL of my questions with utter perfection!
+- Dave Horrocks [DaveyJH](https://github.com/daveyjh), again! for giving me time out of his own studies, for his patience, helping me above and beyond.
+- Shellie Downie [ShellieD](https://github.com/shellieD), for her support, pointing out an obvious issue with my code so quickly.. TWICE! after hours of staring at it and looking straight over the problem.
 - My family for their support, patience and testing!!
-- My wonderful fiancée for being my personal spell checker/Grammer police and for listening to me when I need to rant!
+- My wonderful fiancée for being my personal spell checker/grammer police and for listening to me when I need to rant!
 - Everybody on Slack for tips, advice, quick fixes and support
 
 #### RETURN TO THE [TOP](#numberex)
