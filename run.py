@@ -106,7 +106,7 @@ were thinking of..I WIN! ;-)\n')
             # Game prints a statment and breaks out of the loop
             except ValueError:
                 print(f"         I think you are cheating {name}..\n \
-I am not playing this game with you anymore!")
+        I am not playing this game with you anymore!")
                 break
         else:
             guess = low
