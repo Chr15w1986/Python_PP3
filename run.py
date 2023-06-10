@@ -97,7 +97,7 @@ if __name__ == "__main__":
     print(generate_ascii_art("Numberex"))
 
     while True:
-        user_name = input("Enter your name: ").strip()
+        user_name = input("Enter your name: ").strip().capitalize()
         if user_name:
             break
 
