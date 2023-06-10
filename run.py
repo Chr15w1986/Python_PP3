@@ -63,7 +63,7 @@ remaining: {guess_limit-guess_count}\n')
 remaining: {guess_limit-guess_count}\n')
                 else:
                     print(f'         Well done! You guessed the correct number: \
-{random_number}\n')
+{random_number}\n         MY TURN!')
                 # Checks how many lives are left, loops until zero
                 if guess_count < guess_limit:
                     guess_count += 1
@@ -71,7 +71,7 @@ remaining: {guess_limit-guess_count}\n')
                     out_of_guesses = True
                 if out_of_guesses:
                     print(f'         Sorry, you ran out of guesses. \
-My number was: {random_number}\n')
+My number was: {random_number}\n         MY TURN!')
 
             else:
                 print(f'         Please choose a number between 1 and {num}')
