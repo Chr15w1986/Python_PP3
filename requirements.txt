@@ -1,5 +1,6 @@
-iniconfig==1.1.1
+iniconfig==2.0.0
+packaging==23.1
 pluggy==1.0.0
 py==1.11.0
 pyfiglet==0.8.post1
-pytest==6.2.5
+pytest==7.3.2
