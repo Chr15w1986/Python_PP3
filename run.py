@@ -23,9 +23,15 @@ def end_game(num: int, name: str) -> None:
 
 
 def play_game(num: int, name: str) -> None:
-    random_number = random.randint(1, num)
     guess_count = 1
     guess_limit = 5
+
+    if num > 50:
+        guess_limit = 10
+    if num > 100:
+        guess_limit = 20
+
+    random_number = random.randint(1, num)
 
     while guess_count <= guess_limit:
         guess = input(f"Make a guess at a number between 1 and {num}: ")
@@ -60,6 +66,11 @@ def computer_guess(num: int, name: str) -> None:
     feedback = ""
     guess_count = 1
     guess_limit = 5
+
+    if num > 50:
+        guess_limit = 10
+    if num > 100:
+        guess_limit = 20
 
     while feedback != "c" and guess_count <= guess_limit:
         if low > high:
@@ -101,11 +112,12 @@ if __name__ == "__main__":
         if user_name:
             break
 
-    print(f"\nHello {user_name}, Welcome to Numberex!\n"
+    print(f"\nHello, {user_name}, Welcome to Numberex!\n"
           "The game rules are simple:\n"
           "- Choose your upper number limit\n"
           "- The higher the number, the harder the game!\n"
-          "- You have 5 attempts to guess the number\n"
+          "- You have 5, 10 or 20 attempts to guess the number depending on your upper limit choice\n"
+          "\n"
           "- Firstly, you try and guess the AI's number\n"
           "- Secondly, the AI will try and guess your number\n")
 
