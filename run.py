@@ -58,8 +58,10 @@ def computer_guess(num: int, name: str) -> None:
     high = num
     guess = 0
     feedback = ""
+    guess_count = 1
+    guess_limit = 5
 
-    while feedback != "c":
+    while feedback != "c" and guess_count <= guess_limit:
         if low > high:
             print(f"I think you are cheating, {name}.\nI am not playing this game with you anymore!")
             return
@@ -74,6 +76,8 @@ def computer_guess(num: int, name: str) -> None:
             high = guess - 1
         elif feedback.lower() == "l":
             low = guess + 1
+
+        guess_count += 1
 
 
 def choose_number(name: str) -> None:
